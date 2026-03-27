@@ -1,0 +1,194 @@
+﻿{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'core/css/core.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!--
+<section class="hero_home_bg">
+    <div class="contenedor_contenido_hero_home">
+        <div class="contenido_hero_home">
+            <p class="texto_1">Que los espacios y tu estilo perduren</p>
+            <p class="texto_2">We love Stone</p>
+        </div>
+    </div>
+</section>
+-->
+
+<section class="slider" data-slider>
+    <div class="slider_viewport">
+        <div class="slider_track" data-track>
+            {% for s in slides %}
+            <article class="slide_slide">
+                <img src="{{ s.image.url }}" alt="{{ s.title|default:'Slide' }}">
+                <div class="slider_caption">
+                    {% if s.title %}<h2>{{ s.title }}</h2>{% endif %}
+                    {% if s.subtitle %}<p>{{ s.subtitle }}</p>{% endif %}
+                    {% if s.cta_url and s.cta_text %}
+                    <a class="btn" href="{{ s.cta_url }}">{{ s.cta_text }}</a>
+                    {% endif %}
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+
+    <button class="slider_btn slider_btn--prev" type="button" data-prev aria-label="Anterior"></button>
+    <button class="slider_btn slider_btn--next" type="button" data-next aria-label="Siguiente"></button>
+</section>
+
+<script src="{% static 'js/core.js' %}" defer></script>
+
+
+<section class="identidad_icon">
+    <h2 class="identidad_titulo" data-aos="animate__fadeInUp" data-aos-delay="300" data-aos-duration="1200">¿QUIÉNES SOMOS?</h2>
+    <div class="identidad_contenido">
+        <p class="identidad_texto" data-aos="animate__fadeInUp" data-aos-delay="300" data-aos-duration="1200">
+            Somos proveedor líder en recubrimientos de piedra natural, importadores directos de productos de alta
+            calidad y vanguardia.
+        </p>
+        <img src="/static/img/logo icon.png" alt="Logo Icon Stone" class="identidad_logo" data-aos="animate__fadeInUp" data-aos-delay="300" data-aos-duration="1200">
+    </div>
+
+    <section class="valores_icon">
+    <div class="con_cont_valores" >
+
+        <div class="icons_valores">
+            <div class="cont val_asesoria" data-aos="animate__zoomIn" data-aos-delay="0"  data-aos-duration="1000">
+                <img src="/static/img/cliente.png" alt="">
+                <p>ASESORIA EXPERTA</p>
+            </div>
+
+            <div class="cont val_confianza" data-aos="animate__zoomIn" data-aos-delay="120" data-aos-duration="1000">
+                <img src="/static/img/confianza.png" alt="">
+                <p>CONFIANZA</p>
+            </div>
+
+            <div class="cont val_materiales" data-aos="animate__zoomIn" data-aos-delay="240" data-aos-duration="1000">
+                <img src="/static/img/creatividad.png" alt="">
+                <p>MATERIALES PREMIUM</p>
+            </div>
+
+            <div class="cont val_catalogo" data-aos="animate__zoomIn" data-aos-delay="360" data-aos-duration="1000">
+                <img src="/static/img/desarrollo.png" alt="">
+                <p>AMPLIO CATÁLOGO</p>
+            </div>
+            
+            <div class="cont val_importadores" data-aos="animate__zoomIn" data-aos-delay="480" data-aos-duration="1000">
+                <img src="/static/img/equipo.png" alt="">
+                <p>IMPORTADORES DIRECTOS</p>
+            </div>
+        </div>
+
+    </div>
+    </section>
+</section>
+
+<section class="clientes_slider_section" data-client-slider>
+    <div class="clientes_overlay"></div>
+    <div class="clientes_inner">
+        <h2 class="clientes_title">CONSTRUCTORAS Y ARQUITECTOS CONFÍAN EN NOSOTROS:</h2>
+
+        <button class="clientes_nav clientes_nav--prev" type="button" data-client-prev aria-label="Anterior cliente"></button>
+
+        <div class="clientes_viewport">
+            <div class="clientes_track" data-client-track>
+                {% for cliente in slides_clientes %}
+                <article class="cliente_card">
+                    <div class="cliente_media">
+                        <img src="{{ cliente.image.url }}" alt="{{ cliente.image_alt|default:cliente.title|default:'Cliente Icon Stone' }}">
+                    </div>
+                    {% if cliente.title %}
+                    <p class="cliente_name">{{ cliente.title }}</p>
+                    {% endif %}
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+
+        <button class="clientes_nav clientes_nav--next" type="button" data-client-next aria-label="Siguiente cliente"></button>
+
+        <div class="clientes_cta">
+            <a class="cotizar_proyecto" type="button" href="/formulario">Cotiza material para tu proyecto</a>
+        </div>
+    </div>
+</section>
+
+<section class="proceso_ubicacion"
+    data-parallax-section
+    data-parallax-var="--mapa-offset"
+    data-parallax-speed="0.25"
+    data-parallax-max="140"
+    data-parallax-axis="y">
+        <div class="contenedor_proceso_compra">
+            <h2 class="titulo_proceso">PROCESO DE COMPRA Y ATENCIÓN</h2>
+            <div class="proceso_compra"> 
+                <div class="proceso atencion">
+                    <img src="static/img/catalogo.png" alt="" class="iconos_proceso" id="imagen_prueba">   
+                    <p>Explora nuestro catálogo <br> y escoge tu material 
+                        <br> o solicita asesoría.</p>
+                    <a href="/catalogo" class="boton_proceso">Catálogo</a>
+                </div>
+                
+                <img src="static/img/arrow 2.png" alt="">
+
+                <div class="proceso contacto">
+                    <img src="static/img/contacto.png" alt="" class="iconos_proceso">   
+                    <p>Contáctanos llenando
+                        nuestro <br> formulario de contacto.</p>
+                    <a href="/formulario" class="boton_proceso">Llenar formulario</a>
+                </div>
+
+                <img src="static/img/arrow 2.png" alt="">
+
+                <div class="proceso cotizacion">
+                    <img src="static/img/cotizacion.png" alt="" class="iconos_cotizacion">   
+                    <p>Solicita tu cotización o <br> pide 
+                        información de tu material</p>
+                </div>
+
+                <img src="static/img/arrow 2.png" alt="">
+
+                <div class="proceso anticipo">
+                    <img src="static/img/House_Check 1.png" alt="" class="iconos_proceso">   
+                    <p>Paga el anticipo y espera 
+                        <br> o recoge tu material.</p>
+                </div>
+
+            </div>
+        </div>        
+        <div class="contenedor_ubicación">   
+           
+            <div class="ubicacion">
+                
+                <div class="ubicacion_contenido">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2213.516392725727!2d-103.45970756156318!3d20.70535743907945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428a8d207cc3687%3A0xcfba265b73f4143c!2sIcon%20Stone!5e1!3m2!1ses!2smx!4v1773078296329!5m2!1ses!2smx" 
+                    style="border:0;"
+                    width="700px"
+                    height="700px"></iframe>
+                    <div class="mapa_contenido">
+                        <h2 class="titulo_ubicacion"> ¡VISÍTANOS!</h2>
+                        <p> Av. Aviación 399B, Col. Santa Margarita
+                    Zapopan, Jalisco </p>
+                    <a href="https://maps.app.goo.gl/hDst8G9xAa8xRM2B8" class="boton_ubicacion">¿Cómo llegar?</a>
+                    </div>
+                </div>
+
+            </div>
+        </div> 
+</section>
+
+<form id="formulario">
+    <input type="number" id="edad" placeholder="Digita tu edad">
+    <input type="text" id="nombre" placeholder="Introduce tu nombre">
+    <button type="submit"> Enviar </button>
+    <button type="button" id = "click_agregar"> Presiona para añadir al carrito </button>
+</form>
+<!--Prueba js-->
+<script src="{% static 'js/pruebas.js' %}"></script>
+{% endblock %}

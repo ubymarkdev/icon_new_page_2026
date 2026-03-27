@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ producto.categoria.nombre }} | {{ producto.nombre }}{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'catalogo/producto_detalle.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="producto_detalle_wrap">
+    <div class="producto_detalle_grid">
+        <div class="galeria" data-galeria>
+            <button class="galeria_btn galeria_btn--prev" type="button" data-prev aria-label="Foto anterior"></button>
+
+            <div class="galeria_viewport">
+                <div class="galeria_track" data-track>
+                    <figure class="galeria_slide">
+                        <img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}">
+                    </figure>
+                    {% for foto in producto.fotos.all %}
+                    <figure class="galeria_slide">
+                        <img src="{{ foto.imagen.url }}" alt="{{ producto.nombre }} foto {{ forloop.counter }}">
+                    </figure>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <button class="galeria_btn galeria_btn--next" type="button" data-next aria-label="Siguiente foto"></button>
+        </div>
+
+        <div class="producto_info">
+            <h1><span>{{ producto.categoria.nombre }}</span> | {{ producto.nombre }}</h1>
+
+            <div class="producto_descripcion">
+                <p>{{ producto.descripcion|linebreaksbr|default:"Sin descripcion disponible." }}</p>
+            </div>
+
+            <a class="producto_cta" href="{% url 'formulario' %}">Solicitar informacion</a>
+        </div>
+    </div>
+</section>
+
+<script src="{% static 'js/producto_detalle.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,189 @@
+/*reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root {
+    --primary: #175EAC;
+    --secondary: #58585A;
+    --terciary: #353535;
+    --bg: #f7f7f7;
+}
+
+/* BASE */
+body {
+    background: var(--bg);
+    line-height: 1.6;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+
+
+header {
+    padding: 0px 0;
+    background-color: #ffffff;
+}
+
+.icono_home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+header nav { display: flex; justify-content: space-between; /* logo a la izquierda, menú a la derecha */
+             align-items: center; /* alinea verticalmente */ 
+             padding: 0 60px; }
+
+header .contenedor_header a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 120px;
+    height: 60px;
+
+    text-decoration: none;
+    text-align: center;
+    color: var(--primary);
+    font-size: 18px;
+    font-family: 'Segoe UI';
+    font-weight: 400;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+  
+}
+
+.contenedor_logo_icon {
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.logo_icon {
+    width: 90px;
+    height: auto;
+}
+
+header .contenedor_header a:hover {
+    border-bottom-color: var(--primary);
+}
+
+header .contenedor_header a.is-active {
+    border-bottom-color: var(--primary);
+}
+
+
+.contenedor_header {
+    padding-right: 90px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+
+footer {
+    background-color: #175EAC;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Segoe UI';
+    height: 90px;
+    width: auto;
+}
+
+
+footer p {
+    color: var(--bg);
+    font-family: 'Segoe UI';
+    font-size: 20px;
+    font-weight: 300;
+    }
+    
+.texto_footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.siguenos p {
+    font-weight: 600;
+}
+
+.iconos_redes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.iconos_redes a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconos_redes svg{
+    height: 20px;
+    width: auto;
+
+}
+
+.contacto_texto {
+
+    align-items: flex-start;
+}
+
+.bloque_contacto {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+}
+
+.contactanos p {
+    font-weight: 600;
+}
+
+.datos_contacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 28px;
+}
+
+.telefono, .correo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.datos_contacto svg{
+    color: var(--bg);
+    fill: currentColor;
+    height: 30px;
+    width: auto;
+}
+
+[data-aos^="animate__"] {
+    opacity: 0;
+}
+
+[data-aos^="animate__"].is-animated {
+    opacity: 1;
+}

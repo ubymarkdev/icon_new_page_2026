@@ -1,0 +1,87 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block title %}Formulario{% endblock %} 
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'formulario/formulario.css' %}">
+
+{% endblock %}
+
+{% block content %} 
+
+
+
+
+<div class="formulario">
+    <div class="contenedor_contactanos">
+        <h2>Completa el formulario y contactanos por Whatsapp</h2>
+    </div>
+    <section class="formulario-wrapper">
+
+    <div class="contenedor_form">
+        <form method="POST" action="{% url 'contacto_form' %}">
+            {% csrf_token %}
+
+            <div class="campo campo-nombre">
+                <label for="{{ form.nombre.id_for_label }}">Nombre:</label>
+                {{ form.nombre }}
+            </div>
+
+            <div class="campo campo-telefono">
+                <label for="{{ form.telefono.id_for_label }}">Telefono:</label>
+                <div class="telefono-compuesto">
+                    {% for subwidget in form.telefono.subwidgets %}
+                        {{ subwidget }}
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="campo campo-requerimiento">
+                <label for="{{ form.requerimiento.id_for_label }}">Requerimiento:</label>
+                {{ form.requerimiento }}
+            </div>
+
+            <div class="campo campo-empresa">
+                <label for="{{ form.empresa.id_for_label }}">Empresa:</label>
+                {{ form.empresa }}
+            </div>
+
+            <div class="campo campo-canal">
+                <label for="{{ form.canal.id_for_label }}">Ocupacion:</label>
+                {{ form.canal }}
+            </div>
+
+            <div class="campo campo-submit">
+                <button type="submit">
+                    <span>Enviar mensaje<br>por Whatsapp</span>
+                    <img src="{% static 'img/whatsApp_notification.png' %}" alt="WhatsApp" class="btn-whatsapp-icon">
+                </button>
+            </div>
+        </form>
+    </div>
+    </div>
+</section>
+
+<script>
+    (function () {
+        const telefonoCampo = document.querySelector(".campo-telefono");
+        if (!telefonoCampo) return;
+
+        const prefijo = telefonoCampo.querySelector("select");
+        const numero = telefonoCampo.querySelector("input");
+        if (!prefijo || !numero) return;
+
+        function actualizarMaxLength() {
+            const max = prefijo.value === "MX" ? 10 : 15;
+            numero.maxLength = max;
+            if (numero.value.length > max) {
+                numero.value = numero.value.slice(0, max);
+            }
+        }
+
+        prefijo.addEventListener("change", actualizarMaxLength);
+        actualizarMaxLength();
+    })();
+</script>
+{% endblock %}

@@ -1,0 +1,171 @@
+:root {
+    --primary: #175EAC;
+    --gray-input: #B0B0B2;
+    --bg: #ECECEC;
+}
+
+
+.formulario {
+    padding-top: 63px;
+}
+
+.contenedor_contactanos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contenedor_contactanos h2{
+    color: #175EAC;
+    font-family: 'Segoe UI';
+    font-size: 72px;
+    font-weight: 200;
+}
+
+
+
+.formulario-wrapper {
+    background: var(--bg);
+    min-height: 58vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 44px 19px;
+}
+
+.contenedor_form {
+    width: min(750px, 100%);
+}
+
+.contenedor_form form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(235px, 1fr));
+    gap: 13px 19px;
+    align-items: end;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo label {
+    color: var(--primary);
+    font-size: 29px;
+    line-height: 1.1;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.contact-input,
+.contact-select {
+    height: 44px;
+    border: 0;
+    border-radius: 10px;
+    background: var(--gray-input);
+    color: #fff;
+    font-size: 20px;
+    padding: 0 13px;
+    width: 100%;
+}
+
+.contact-input::placeholder {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.contact-select {
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #f2f2f2 50%),
+        linear-gradient(135deg, #f2f2f2 50%, transparent 50%);
+    background-position: calc(100% - 16px) 19px, calc(100% - 10px) 19px;
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+    padding-right: 35px;
+}
+
+.telefono-compuesto {
+    display: grid;
+    grid-template-columns: minmax(150px, 42%) minmax(0, 58%);
+    align-items: center;
+    gap: 12px;
+}
+
+.campo-telefono select.contact-select,
+.campo-telefono input.contact-input {
+    height: 48px;
+    border-radius: 12px;
+    background-color: #b3b3b3;
+    color: #f2f2f2;
+}
+
+.campo-telefono select.contact-select {
+    width: 100%;
+    min-width: 0;
+    padding-left: 12px;
+    padding-right: 30px;
+}
+
+.campo-telefono input.contact-input {
+    width: 100%;
+    min-width: 0;
+}
+
+.campo-submit {
+    align-self: end;
+}
+
+.campo-submit button {
+    min-height: 44px;
+    border: 0;
+    border-radius: 10px;
+    background: var(--primary);
+    color: #fff;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 21px;
+    line-height: 1.1;
+    padding: 6px 23px;
+    cursor: pointer;
+    position: relative;
+    overflow: visible;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.campo-submit button span {
+    display: block;
+    text-align: center;
+}
+
+.btn-whatsapp-icon {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    top: -28px;
+    right: -30px;
+    pointer-events: none;
+}
+
+@media (max-width: 900px) {
+    .contenedor_form form {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .campo label {
+        font-size: 24px;
+    }
+
+    .telefono-compuesto {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .campo-telefono select.contact-select {
+        width: 100%;
+        min-width: 0;
+    }
+}

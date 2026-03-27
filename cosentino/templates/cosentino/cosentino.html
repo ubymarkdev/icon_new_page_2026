@@ -1,0 +1,107 @@
+{% extends "base.html" %} 
+
+{% load static %}
+
+{% block title %}Cosentino{% endblock %} 
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'cosentino/css/cosentino.css' %}">
+{% endblock %}
+
+{% block content %} 
+
+
+<section class="dekton_video_hero">
+    <video autoplay muted loop class="video_fondo">
+            <source src="/static/img/Vídeo Dekton Hero.mp4" type="video/mp4">
+    </video>
+    <div class="dekton_video_hero_contenido">
+        <img src="/static/img/Logo cosentino blanco 1.png" alt="" class="logo_cosentino">
+        <p> Superficies de calidad superior para arquitectura </p>
+        <div class="cont_logos_cosentino">
+            <img src="/static/img/Logo Dekton Blanco.png" alt="logo_dekton" class="logo_dekton">
+            <img src="/static/img/Logo Silestone Blanco.png" alt="logo_silestone" class="logo_silestone">
+            <img src="/static/img/Logo Sensa Blanco C.png" alt="logo_sensa" class="logo_sensa">
+        </div>
+    </div>
+</section>
+
+<section class="hero_dekton">
+    <div class="cont_caracteristicas_dekton">
+        <div class="cont_logo_dekton">
+            <img src="/static/img/Logo Dekton Blanco.png" class="logo_dekton_hdekton" alt="logo_dekton">
+        </div>
+        <div class="caractaristicas_dekton">
+                <p> Dekton es una superficie ultracompacta, desarrollada por Cosentino <br> con 
+                miníma porosidad y alta resistencia al calor. </p>
+                <div class="simbolos">
+
+                    <div class="cont_dk_car">
+                        <img src="/static/img/resistencia_uv.png" alt="">
+                        <p>Altamente resistente <br> a los rayos UV</p>
+                    </div>
+
+                    <div class="cont_dk_car">
+                        <img src="/static/img/resistencia_rayado.png" alt="" >
+                        <p>Altamente resistente <br> al rayado</p>
+                    </div>
+
+                    <div class="cont_dk_car">
+                        <img src="/static/img/resistencia_calor.png" alt="">
+                        <p>Alta resistencia <br> al fuego y calor</p>
+                    </div>
+
+                    <div class="cont_dk_car">
+                        <img src="/static/img/resistencia_abrasión.png" alt="">
+                        <p>Resistencia a la <br> abrasión</p>
+                    </div>
+
+                    <div class="cont_dk_car">
+                        <img src="/static/img/resitencia_deshielo.png" alt="">
+                        <p>Resistencia al <br> hielo y deshielo</p>
+                    </div>
+
+                </div>
+        </div>
+
+    </div>    
+</section>
+
+
+<section class="aplicaciones_dk_contenedor">
+    <div class="aplicaciones_dk">
+
+        <div class="aplicaciones_dk_imagenes">
+            
+            <div class="cont_imagenes">
+                    <div class="aplicaciones_dk_fila aplicaciones_dk_fila_top">
+                        <div class="aplicaciones_dk_imagen1">
+                            <img src="/static/img/dkimage1.png" alt="">
+                        </div>
+
+                        <div class="aplicaciones_dk_imagen2">
+                            <img src="/static/img/dkimage2.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="aplicaciones_dk_fila aplicaciones_dk_fila_bottom">
+                        <div class="aplicaciones_dk_imagen3">
+                            <img src="/static/img/dkimage3.png" alt="">
+                        </div>
+                        
+                        <div class="aplicaciones_dk_imagen4">
+                            <img src="/static/img/dkimage4.png" alt="">
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="aplicaciones_dk_info">
+            <h3>APLICACIONES DEKTON</h3>
+            <a href="">Descubre más aplicaciones <br> de Dekton</a>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

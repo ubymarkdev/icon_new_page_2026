@@ -1,0 +1,214 @@
+:root {
+    --primary: #175EAC;
+    --secondary: #58585A;
+    --terciary: #353535;
+    --bg: #f7f7f7;
+}
+
+.dekton_video_hero{
+    position: relative;
+    height: 90vh; /* para ocupar toda la pantalla */
+    overflow: hidden;
+    align-content: center;
+}
+
+.video_fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ajusta el video al contenedor */
+    z-index: -1; /* lo manda detrás del contenido */
+}
+
+.dekton_video_hero_contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+
+
+.dekton_video_hero_contenido p{
+    position: relative;
+    z-index: 1; /* asegura que el texto quede encima */
+    color: white;
+    font-family: 'Segoe UI';
+    font-weight: 100;
+    font-size: 40px;
+    text-align: center;
+    }
+
+.cont_logos_cosentino {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 150px;
+}
+
+.logo_cosentino {
+    height: 80px;
+    width: auto;
+}
+
+.logo_dekton {
+    height: 70px;
+    width: auto;
+}
+
+.logo_silestone {
+    height: 50px;
+    width: auto;
+}
+
+.logo_sensa {
+    height: 40px;
+    width: auto;
+}
+
+.hero_dekton {
+    background-image: url("/static/img/collage_fondo_dekton.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cont_logo_dekton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.3);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background-size: contain;
+}
+
+.cont_caracteristicas_dekton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 50px
+}
+
+.caractaristicas_dekton {
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+}
+
+.caractaristicas_dekton p{
+    text-align: center;
+    color: var(--bg);
+    font-size: 30px;
+    font-weight: 100;
+    font-family: 'Segoe UI';
+}
+
+.logo_dekton_hdekton {
+    height: 110px;
+    width: auto;
+}
+
+.simbolos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 250px;
+}
+
+.simbolos img{
+    height: 100px;
+    width: auto;
+    align-self: center;
+}
+
+.simbolos p {
+    font-family: 'Segoe UI';
+    color: var(--bg);
+    font-size: 20px;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.9);
+}
+
+.img_hdekton {
+    align-items: center;
+}
+
+.cont_dk_car{
+    display: flex;
+    flex-direction: column;
+}
+
+.aplicaciones_dk_contenedor {
+    background-image: url("/static/img/DK_Khalo_Detail.jpg");
+}
+
+.aplicaciones_dk{
+    display: flex;
+    flex-direction: row;
+}
+
+.aplicaciones_dk_imagenes{
+    width: 100%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+.cont_imagenes {
+    display: flex;
+    flex-direction: column;
+    padding-right: 20%;
+
+}
+
+.aplicaciones_dk_fila{
+    display: flex;
+    gap: 12px;
+}
+
+.aplicaciones_dk_imagen1{
+    width: 838px;
+    height: 284px;
+}
+
+.aplicaciones_dk_imagen2{
+    width: 205px;
+    height: 284px;
+}
+
+.aplicaciones_dk_imagen3{
+    width: 507px;
+    height: 284px;
+}
+
+.aplicaciones_dk_imagen4{
+    width: 536px;
+    height: 284px;
+}
+
+.aplicaciones_dk_imagenes img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.aplicaciones_dk_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+

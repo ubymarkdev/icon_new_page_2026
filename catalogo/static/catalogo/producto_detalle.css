@@ -1,0 +1,140 @@
+:root {
+    --primary: #175EAC;
+    --secondary: #58585A;
+    --terciary: #353535;
+    --bg: #f7f7f7;
+}
+
+.producto_detalle_wrap {
+    padding: 56px 24px;
+}
+
+.producto_detalle_grid {
+    max-width: 1536px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(504px, 744px) minmax(320px, 1fr);
+    gap: 100px;
+    align-items: start;
+}
+
+.galeria {
+    position: relative;
+    display: grid;
+    grid-template-columns: 40px 1fr 40px;
+    align-items: center;
+    gap: 12px;
+}
+
+.galeria_viewport {
+    overflow: hidden;
+}
+
+.galeria_track {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.galeria_slide {
+    min-width: 100%;
+    margin: 0;
+}
+
+.galeria_slide img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+
+.galeria_btn {
+    width: 36px;
+    height: 36px;
+    border: 0;
+    border-radius: 50%;
+    background: #666;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0;
+}
+
+.galeria_btn::before {
+    font-size: 18px;
+    line-height: 1;
+}
+
+.galeria_btn--prev::before {
+    content: "\2039";
+}
+
+.galeria_btn--next::before {
+    content: "\203A";
+}
+
+.producto_info h1 {
+    margin: 0 0 28px;
+    color: var(--primary);
+    font-size: clamp(25px, 4vw, 50px);
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.1;
+}
+
+.producto_info h1 span {
+    font-weight: 400;
+}
+
+.producto_descripcion h2 {
+    margin: 0 0 10px;
+    color: var(--primary);
+    font-size: 60px;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 300;
+}
+
+.producto_descripcion p {
+    margin: 0;
+    color: #4d4d4d;
+    font-size: 30px;
+    font-weight: 200;
+    line-height: 1.45;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.producto_cta {
+    margin-top: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 220px;
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #175EAC;
+    color: var(--bg);
+    font-size: 22px;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 600;
+}
+
+@media (max-width: 920px) {
+    .producto_detalle_grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .producto_info h1 {
+        font-size: 15px;
+    }
+
+    .producto_descripcion h2 {
+        font-size: 28px;
+    }
+
+    .producto_descripcion p {
+        font-size: 17px;
+    }
+
+    .producto_cta {
+        font-size: 20px;
+    }
+}
