@@ -147,10 +147,6 @@
     flex-direction: column;
 }
 
-.aplicaciones_dk_contenedor {
-    background-image: url("/static/img/DK_Khalo_Detail.jpg");
-}
-
 .aplicaciones_dk{
     display: flex;
     flex-direction: row;
@@ -162,14 +158,13 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-    align-items: center;
     justify-content: center;
+    align-items: flex-end;
 }
 
 .cont_imagenes {
     display: flex;
     flex-direction: column;
-    padding-right: 20%;
 
 }
 
@@ -208,7 +203,35 @@
 .aplicaciones_dk_info {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    width: 50%;
+    padding-left: 50px;
+}
+
+.aplicaciones_dk_fila_top {
+    margin-bottom: 10px;
+}
+
+.aplicaciones_dk_info_2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.aplicaciones_dk_info_2 h3 {
+    color: var(--primary);
+    font-size: 50px;
+    font-family: 'Segoe UI';
+    font-weight: 300;
+}
+
+.aplicaciones_dk_info_2 a{
+    font-family: 'Segoe UI';
+    height: 50px;
+    width: 210px;
+    text-decoration: none;
+    background-color: #175EAC;
+    color: var(--bg);
+    border-radius: 9px;
 }
 
