@@ -174,23 +174,220 @@
 }
 
 .aplicaciones_dk_imagen1{
+    position: relative;
     width: 838px;
     height: 284px;
+    transition: transform 0.9s ease;
+}
+
+.aplicaciones_dk_imagen1:hover img{
+    transform: scale(105%);
+    
+}
+
+.aplicaciones_dk_imagen1_popover{
+    position: absolute;
+    border-radius: 5px;
+    height: 80px;
+    width: 150px;
+    bottom: 35%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: var(--bg);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+.aplicaciones_dk_imagen1_popover p{
+    color: var(--primary);
+    font-size: 20px;
+    font-family: 'Segoe UI';
+    font-weight: 200;
+}
+
+.aplicaciones_dk_imagen1_popover a {
+    color: var(--bg);
+    text-decoration: none;
+    font-family: 'Segoe UI';
+    background-color: #175EAC;
+    padding: 3px;
+    border-radius: 5px;
+    
+}
+
+
+.aplicaciones_dk_imagen1:hover .aplicaciones_dk_imagen1_popover{
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
 }
 
 .aplicaciones_dk_imagen2{
     width: 205px;
     height: 284px;
+    position: relative;
+    transition: transform 0.9s ease;
+}
+
+.aplicaciones_dk_imagen2:hover img{
+    transform: scale(105%);
+    z-index: -1;
+    
+}
+
+.aplicaciones_dk_imagen2_popover{
+    position: absolute;
+    border-radius: 5px;
+    height: 80px;
+    width: 150px;
+    bottom: 35%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: var(--bg);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    z-index: 10;
+}
+.aplicaciones_dk_imagen2_popover p{
+    color: var(--primary);
+    font-size: 20px;
+    font-family: 'Segoe UI';
+    font-weight: 200;
+}
+
+.aplicaciones_dk_imagen2_popover a {
+    color: var(--bg);
+    text-decoration: none;
+    font-family: 'Segoe UI';
+    background-color: #175EAC;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+
+.aplicaciones_dk_imagen2:hover .aplicaciones_dk_imagen2_popover{
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
 }
 
 .aplicaciones_dk_imagen3{
     width: 507px;
     height: 284px;
+    position: relative;
+    transition: transform 0.9s ease;
+}
+
+.aplicaciones_dk_imagen3:hover img{
+    transform: scale(105%);
+    z-index: -1;
+    
+}
+
+.aplicaciones_dk_imagen3_popover{
+    position: absolute;
+    border-radius: 5px;
+    height: 80px;
+    width: 150px;
+    bottom: 35%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: var(--bg);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    z-index: 10;
+}
+.aplicaciones_dk_imagen3_popover p{
+    color: var(--primary);
+    font-size: 20px;
+    font-family: 'Segoe UI';
+    font-weight: 200;
+}
+
+.aplicaciones_dk_imagen3_popover a {
+    color: var(--bg);
+    text-decoration: none;
+    font-family: 'Segoe UI';
+    background-color: #175EAC;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.aplicaciones_dk_imagen3:hover .aplicaciones_dk_imagen3_popover{
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
 }
 
 .aplicaciones_dk_imagen4{
     width: 536px;
     height: 284px;
+    position: relative;
+    transition: transform 0.9s ease;
+}
+
+.aplicaciones_dk_imagen4:hover img{
+    transform: scale(105%);
+    z-index: -1;
+    
+}
+
+.aplicaciones_dk_imagen4_popover{
+    position: absolute;
+    border-radius: 5px;
+    height: 80px;
+    width: 150px;
+    bottom: 35%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: var(--bg);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    z-index: 10;
+}
+.aplicaciones_dk_imagen4_popover p{
+    color: var(--primary);
+    font-size: 20px;
+    font-family: 'Segoe UI';
+    font-weight: 200;
+}
+
+.aplicaciones_dk_imagen4_popover a {
+    color: var(--bg);
+    text-decoration: none;
+    font-family: 'Segoe UI';
+    background-color: #175EAC;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.aplicaciones_dk_imagen4:hover .aplicaciones_dk_imagen4_popover{
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
 }
 
 .aplicaciones_dk_imagenes img{
