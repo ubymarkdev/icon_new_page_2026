@@ -193,7 +193,6 @@
     bottom: 35%;
     left: 50%;
     transform: translateX(-50%) translateY(10px);
-    background-color: var(--bg);
     opacity: 0;
     pointer-events: none;
     transition: all 0.25s ease;
@@ -204,7 +203,7 @@
     gap: 2px;
 }
 .aplicaciones_dk_imagen1_popover p{
-    color: var(--primary);
+    color: var(--bg);
     font-size: 20px;
     font-family: 'Segoe UI';
     font-weight: 200;
@@ -248,7 +247,6 @@
     bottom: 35%;
     left: 50%;
     transform: translateX(-50%) translateY(10px);
-    background-color: var(--bg);
     opacity: 0;
     pointer-events: none;
     transition: all 0.25s ease;
@@ -260,7 +258,7 @@
     z-index: 10;
 }
 .aplicaciones_dk_imagen2_popover p{
-    color: var(--primary);
+    color: var(--bg);
     font-size: 20px;
     font-family: 'Segoe UI';
     font-weight: 200;
@@ -303,7 +301,6 @@
     bottom: 35%;
     left: 50%;
     transform: translateX(-50%) translateY(10px);
-    background-color: var(--bg);
     opacity: 0;
     pointer-events: none;
     transition: all 0.25s ease;
@@ -315,7 +312,7 @@
     z-index: 10;
 }
 .aplicaciones_dk_imagen3_popover p{
-    color: var(--primary);
+    color: var(--bg);
     font-size: 20px;
     font-family: 'Segoe UI';
     font-weight: 200;
