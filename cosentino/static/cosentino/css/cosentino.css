@@ -181,7 +181,7 @@
 }
 
 .aplicaciones_dk_imagen1:hover img{
-    transform: scale(105%);
+    transform: scale(102%);
     
 }
 
@@ -234,7 +234,7 @@
 }
 
 .aplicaciones_dk_imagen2:hover img{
-    transform: scale(105%);
+    transform: scale(103%);
     z-index: -1;
     
 }
@@ -288,7 +288,7 @@
 }
 
 .aplicaciones_dk_imagen3:hover img{
-    transform: scale(105%);
+    transform: scale(103%);
     z-index: -1;
     
 }
@@ -341,7 +341,7 @@
 }
 
 .aplicaciones_dk_imagen4:hover img{
-    transform: scale(105%);
+    transform: scale(102%);
     z-index: -1;
     
 }
@@ -354,7 +354,6 @@
     bottom: 35%;
     left: 50%;
     transform: translateX(-50%) translateY(10px);
-    background-color: var(--bg);
     opacity: 0;
     pointer-events: none;
     transition: all 0.25s ease;
@@ -366,7 +365,7 @@
     z-index: 10;
 }
 .aplicaciones_dk_imagen4_popover p{
-    color: var(--primary);
+    color: var(--bg);
     font-size: 20px;
     font-family: 'Segoe UI';
     font-weight: 200;
