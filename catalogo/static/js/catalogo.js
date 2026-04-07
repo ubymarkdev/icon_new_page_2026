@@ -3,6 +3,7 @@ const slides = document.querySelectorAll(".slide");
 const btnNext = document.querySelector(".boton_avanzar");
 const btnPrev = document.querySelector(".boton_retroceder");
 const productos = document.querySelectorAll(".producto");
+const descripciones = document.querySelectorAll(".cont_descripcion");
 
 let indice = 0;
 let direccion = 1;
@@ -11,6 +12,7 @@ const categorias = Array.from(slides).map((slide) => slide.dataset.categoria);
 function actualizarSlider() {
     pintarEstadoSlides();
     filtrarProductos();
+    filtrarDescripcion();
 }
 
 if (btnNext) {
@@ -74,6 +76,18 @@ function pintarEstadoSlides() {
             slide.classList.add("is-side", "is-next");
         } else {
             slide.classList.add("is-hidden");
+        }
+    });
+}
+
+function filtrarDescripcion() {
+    const categoriaActiva = categorias[indice];
+
+    descripciones.forEach((descripcion) => {
+        if (descripcion.dataset.categoria === categoriaActiva) {
+            descripcion.style.display = "block";
+        } else {
+            descripcion.style.display = "none";
         }
     });
 }

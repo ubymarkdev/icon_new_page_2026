@@ -7,6 +7,7 @@ class Categoria(models.Model):
     imagen_slider = models.ImageField(upload_to="categorias/slider/")
     orden = models.PositiveIntegerField(default=0)
     activa = models.BooleanField(default=True)
+    descripcion_categoria = models.CharField(max_length=150, default="Sin descripción")
 
     class Meta:
         ordering = ["orden", "nombre"]

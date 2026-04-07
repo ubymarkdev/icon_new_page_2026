@@ -8,9 +8,11 @@
 {% endblock %}
 
 {% block content %}
+
+
+    
 <section class="slider_categorias">
     <button class="slider_btn boton_retroceder"></button>
-
     <div class="slider_track">
         {% for categoria in categorias %}
         <div class="slide"
@@ -20,9 +22,17 @@
         </div>
         {% endfor %}
     </div>
-
     <button class="slider_btn boton_avanzar"></button>
+    <section class="categoria_descripcion">
+        {% for categoria in categorias %}
+        <div class="cont_descripcion" data-categoria="{{ categoria.slug }}">
+            <p>{{ categoria.descripcion_categoria }}</p>
+        </div>
+        {% endfor %}
+    </section>
 </section>
+
+
 
 <section class="tipo_de_piedra">
     {% for producto in productos %}
