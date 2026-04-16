@@ -33,6 +33,15 @@
     object-fit: cover;
 }
 
+@media (max-width: 480px) { .slide_slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+      
+}
+
 .slider_caption {
     position: absolute;
     top: 50%;
