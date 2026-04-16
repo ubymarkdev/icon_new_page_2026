@@ -148,8 +148,3 @@ STORAGES = {
 DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
 
 PHONENUMBER_DEFAULT_REGION = "MX"
-
-User = get_user_model()
-
-if not User.objects.filter(username="admin").exists():
-    User.objects.create_superuser("admin", "admin@email.com", "12345678")
