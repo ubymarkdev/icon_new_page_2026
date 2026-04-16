@@ -15,6 +15,7 @@ import os
 import cloudinary
 import cloudinary_storage
 import dj_database_url
+from django.contrib.auth import get_user_model
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -147,3 +148,8 @@ STORAGES = {
 DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
 
 PHONENUMBER_DEFAULT_REGION = "MX"
+
+User = get_user_model()
+
+if not User.objects.filter(username="admin").exists():
+    User.objects.create_superuser("admin", "admin@email.com", "12345678")
