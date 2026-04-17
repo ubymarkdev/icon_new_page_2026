@@ -127,7 +127,8 @@ footer {
 
 @media (max-width:480px ) {footer {
     justify-content: center;
-    gap: 25px
+    gap: 25px;
+    height: 120px;
 }}
 
 footer p {
@@ -148,7 +149,7 @@ footer p {
 }
 
 @media (max-width:480px ) {.texto_footer {
-    gap: 0px;
+    gap: 12px;
     align-items: center;
     text-align: left;
     width: 25%;
@@ -176,6 +177,7 @@ footer p {
 @media (max-width:480px ) {.iconos_redes {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 10px;
 }}
 
 .iconos_redes a {
@@ -191,7 +193,7 @@ footer p {
 }
 
 @media (max-width:480px ) {.iconos_redes svg {
-    height: 10px;
+    height: 15px;
     width: auto;
 }}
 

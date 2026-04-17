@@ -1,4 +1,4 @@
-:root {
+﻿:root {
     --primary: #175EAC;
     --secondary: #58585A;
     --terciary: #353535;
@@ -41,7 +41,7 @@
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
       
 }
@@ -267,6 +267,10 @@
 .cont img {
     display: flex;
     justify-self: center;
+}
+
+.val_confianza {
+    margin-right: 100px;
 }
 
 .clientes_slider_section {
@@ -625,9 +629,6 @@
         margin-top: 0;
     }
 
-    .slide_slide img {
-        height: 150px;
-    }
 
     .slider_caption {
         width: 92%;
@@ -665,6 +666,7 @@
         min-height: 330px;
         padding: 28px 12px 22px;
         justify-content: flex-start;
+        gap: 10px;
     }
 
     .identidad_titulo {
@@ -676,14 +678,16 @@
     .identidad_contenido {
         margin: 0;
         width: 100%;
-        gap: 10px;
+        gap: 30px
     }
 
     .identidad_texto {
         max-width: 100%;
-        font-size: 13px;
+        font-size: 20px;
         line-height: 1.35;
         text-align: center;
+        width: 250px;
+
     }
 
     .identidad_logo {
@@ -698,7 +702,7 @@
         width: 100%;
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 12px 6px;
+        gap: 55px 6px;
         justify-items: center;
         align-items: start;
     }
@@ -726,8 +730,8 @@
     }
 
     .cont img {
-        width: 30px;
-        height: 30px;
+        height: 70px;
+        width: auto;
         object-fit: contain;
     }
 
