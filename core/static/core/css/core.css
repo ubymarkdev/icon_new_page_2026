@@ -5,6 +5,10 @@
     --bg: #f7f7f7;
 }
 
+.body {
+    font-family: Arial !important;
+}
+
 .slider {
     position: relative;
     width: 100%;
