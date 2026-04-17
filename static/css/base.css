@@ -17,6 +17,7 @@
 body {
     background: var(--bg);
     line-height: 1.6;
+    font-family: "Inter", sans-serif;
 }
 
 body {
@@ -54,7 +55,6 @@ header .contenedor_header a{
     text-align: center;
     color: var(--primary);
     font-size: 18px;
-    font-family: 'Segoe UI';
     font-weight: 400;
     border-bottom: 2px solid transparent;
     transition: border-color 0.3s ease;
@@ -97,7 +97,6 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    font-family: 'Segoe UI';
     height: 90px;
     width: auto;
 }
@@ -105,7 +104,6 @@ footer {
 
 footer p {
     color: var(--bg);
-    font-family: 'Segoe UI';
     font-size: 20px;
     font-weight: 300;
     }

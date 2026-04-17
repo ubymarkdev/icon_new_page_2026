@@ -60,7 +60,6 @@
     text-align: center;
     color: var(--bg);
     z-index: 2;
-    font-family: 'Segoe UI';
 }
 
 .slider_caption h2 {
@@ -171,7 +170,6 @@
     margin: 0;
     text-align: center;
     color: var(--primary);
-    font-family: 'Segoe UI';
     font-size: 45px;
     font-weight: 300;
     padding-bottom: 150px;
@@ -192,7 +190,6 @@
 .identidad_texto {
     margin: 0;
     color: var(--secondary);
-    font-family: 'Segoe UI';
     font-size: 30px;
     font-weight: 200;
     line-height: 1.2;
@@ -211,7 +208,6 @@
 
     .identidad_titulo {
         font-size: 40px;
-        font-family: 'Segoe UI';
     }
 
     .identidad_contenido {
@@ -233,7 +229,6 @@
 
 .con_cont_valores{
     font-size: 30px;
-    font-family: 'Segoe UI';
 }
 
 .icons_valores {
@@ -262,7 +257,6 @@
 
 .icons_valores p{
     color: #175EAC;
-    font-family: 'Segoe UI';
     font-size: 20px;
 }
 
@@ -319,7 +313,6 @@
     margin: 0 0 44px;
     text-align: center;
     color: #f4f4f4;
-    font-family: "Segoe UI";
     font-size: clamp(30px, 3.2vw, 46px);
     font-weight: 300;
 }
@@ -370,7 +363,6 @@
 .cliente_name {
     margin: 20px 0 0;
     color: #f2f2f2;
-    font-family: "Segoe UI";
     font-size: clamp(20px, 2.2vw, 36px);
     font-weight: 100;
     opacity: 0;
@@ -438,7 +430,6 @@
     padding: 14px 30px;
     background: var(--primary);
     color: #fff;
-    font-family: "Segoe UI";
     font-size: 18px;
     font-weight: 400;
     letter-spacing: 0.2px;
@@ -514,7 +505,6 @@
     z-index: 1;}
 
 .titulo_ubicacion {
-    font-family: 'Segoe UI';
     font-size: 45px;
     text-align: center;
     font-weight: 300;
@@ -525,7 +515,6 @@
 }   
 
 .titulo_proceso{
-    font-family: 'Segoe UI';
     font-size: 45px;
     text-align: center;
     font-weight: 300;
@@ -553,7 +542,6 @@
 }
 
 .ubicacion_contenido h4{
-    font-family: 'Segoe UI';
     color: var(--secondary);
     font-weight: 200;
     font-size: 45px;
@@ -561,7 +549,6 @@
 }
 
 .ubicacion_contenido p{
-    font-family: 'Segoe UI';
     color: var(--secondary);
     font-weight: 200;
     font-size: 30px;
@@ -589,7 +576,6 @@
 }
 
 .proceso p{
-    font-family: 'Segoe UI';
     font-size: 20px;
     color: var(--secondary);
 }
@@ -609,7 +595,6 @@
     display: inline-block;
     border-radius: 8px;
     text-decoration: none;
-    font-family: 'Segoe UI';
     color: var(--bg);
     background-color: var(--primary);
     width: 150px;
@@ -627,7 +612,6 @@
     text-decoration: none;
     color: var(--bg);
     background-color: var(--primary);
-    font-family: 'Segoe UI';
     font-size: 25px;
     height: 50px;
     width: 200px;
