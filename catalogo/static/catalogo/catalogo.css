@@ -194,6 +194,92 @@
     transform: scale(1.05);
 }
 
+@media (max-width: 480px) {
+    .slide.is-active{
+    display: flex;
+    order: 2;
+    width: 22rem;
+    height: 11rem;
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 0 4px var(--primary);
+
+}
+.slide.is-side {
+    display: flex;
+    opacity: 0.9;
+    width: 6rem;
+    height: 5rem;
+    transform: scale(0);
+}
+.slider_categorias div {
+    color: var(--bg);
+    font-size: 26px;
+    font-family: 'Segoe UI';
+    font-weight: 300;
+    text-shadow: 2px 1px 10px #000000;
+}
+.slider_track {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    min-height: 100px;
+}
+
+.categoria_descripcion {
+    text-align: center;
+    height: 90px;
+}
+
+.cont_descripcion p {
+    font-size: 14px;
+}
+
+.tipo_de_piedra {
+    display: grid;
+    grid-template-columns: repeat(2, 9rem);
+    column-gap: 0px;
+    row-gap: 30px;
+    justify-items: start;
+    justify-content: center;
+} 
+
+.producto_img{
+    height: 7rem;
+    width: 7rem;
+    display: block;
+}
+
+.producto_media {
+    position: relative;
+    width: 108px;
+    height: 102px;
+    transition: transform 0.6s cubic-bezier(0.25, 0.9, 0.35, 1);
+}
+
+.producto_nombre {
+    font-family: 'Segoe UI';
+    color: var(--secondary);
+    font-size: 11px;
+    margin-top: 10px;
+}
+
+.slider_categorias {
+    position: relative;
+    width: 24rem;
+    margin: 0px auto 0px;
+    padding: 0px 0px;
+    justify-items: center;
+   
+}
+.slide {
+    padding: 0px 0px;
+}
+}
+
+    
+
 @keyframes slideEnterRight {
     from {
         opacity: 0;
