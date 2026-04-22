@@ -45,10 +45,13 @@
 
 <body>
     <header>
-        <nav>
-                    <a href="/" class="icono_home">
-                        <img src="{% static 'img/logo icon.png' %}" alt="Logo Icon Stone" class="logo_icon">
-                    </a> 
+            
+            <a href="/" class="icono_home">
+                <img src="{% static 'img/logo icon.png' %}" alt="Logo Icon Stone" class="logo_icon">
+            </a> 
+            <button class="menu_movil" id="abrir">Abrir</button>
+        <nav class="nav" id="nav">
+            <button class="cerrar_menu" id="cerrar"> Cerrar</button>      
             <section class="contenedor_header" >
                 <a href="/" class="{% if request.path == '/' %}is-active{% endif %}">Inicio </a>
                 <a href="/cosentino/" class="{% if '/cosentino/' in request.path %}is-active{% endif %}">Cosentino</a>
@@ -56,11 +59,12 @@
                 <a href="/formulario/" class="{% if '/formulario/' in request.path %}is-active{% endif %}">Contáctanos</a>
                 <a href="/blog/" class="{% if '/blog/' in request.path %}is-active{% endif %}">Blog</a>
             </section>
-            <button class="menu_movil">abrir menú</button>
+            
 
         </nav>
+        
     </header>
-    
+    <script src="{% static 'js/base.js' %}"></script>
     {% block content %}
     <main>
         
