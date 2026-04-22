@@ -6,7 +6,7 @@
 
 
 .formulario {
-    padding-top: 63px;
+    padding-top: 3.281vw;
 }
 
 .contenedor_contactanos{
@@ -32,17 +32,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 44px 19px;
+    padding: 2.292vw 0.99vw;
 }
 
 .contenedor_form {
-    width: min(750px, 100%);
+    width: min(39.063vw, 100%);
 }
 
 .contenedor_form form {
     display: grid;
-    grid-template-columns: repeat(2, minmax(235px, 1fr));
-    gap: 13px 19px;
+    grid-template-columns: repeat(2, minmax(12.24vw, 1fr));
+    gap: 0.677vw 0.99vw;
     align-items: end;
 }
 
@@ -87,9 +87,9 @@
 
 .telefono-compuesto {
     display: grid;
-    grid-template-columns: minmax(150px, 42%) minmax(0, 58%);
+    grid-template-columns: minmax(7.813vw, 42%) minmax(0, 58%);
     align-items: center;
-    gap: 12px;
+    gap: 0.625vw;
 }
 
 .campo-telefono select.contact-select,
@@ -152,7 +152,7 @@
 @media (max-width: 900px) {
     .contenedor_form form {
         grid-template-columns: 1fr;
-        gap: 13px;
+        gap: 1.444vw;
     }
 
     .campo label {

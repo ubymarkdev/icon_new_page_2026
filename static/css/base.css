@@ -42,7 +42,7 @@ header {
 
 header nav { display: flex; justify-content: space-between; /* logo a la izquierda, menÃº a la derecha */
              align-items: center; /* alinea verticalmente */ 
-             padding: 0 60px;}
+             padding: 0 3.125vw;}
 
 
 header .contenedor_header a{
@@ -107,7 +107,7 @@ header .contenedor_header a.is-active {
 
 
 .contenedor_header {
-    padding-right: 90px;
+    padding-right: 4.688vw;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -121,14 +121,14 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    height: 90px;
+    height: 4.688vw;
     width: auto;
 }
 
 @media (max-width:480px ) {footer {
     justify-content: center;
-    gap: 25px;
-    height: 120px;
+    gap: 5.208vw;
+    height: 25vw;
 }}
 
 footer p {
@@ -144,12 +144,12 @@ footer p {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 50px;
+    gap: 2.604vw;
     align-items: center;
 }
 
 @media (max-width:480px ) {.texto_footer {
-    gap: 12px;
+    gap: 2.5vw;
     align-items: center;
     text-align: left;
     width: 25%;
