@@ -40,6 +40,7 @@
 
     <button class="slider_btn slider_btn--prev" type="button" data-prev aria-label="Anterior"></button>
     <button class="slider_btn slider_btn--next" type="button" data-next aria-label="Siguiente"></button>
+    <div class="slider_dots" data-home-dots aria-label="Indicadores de slide home"></div>
 </section>
 
 <script src="{% static 'js/core.js' %}" defer></script>
@@ -110,6 +111,7 @@
                 {% endfor %}
             </div>
         </div>
+        <div class="clientes_dots" data-client-dots aria-label="Indicadores de clientes"></div>
 
         <button class="clientes_nav clientes_nav--next" type="button" data-client-next aria-label="Siguiente cliente"></button>
 

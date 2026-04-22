@@ -4,15 +4,43 @@ const btnNext = document.querySelector(".boton_avanzar");
 const btnPrev = document.querySelector(".boton_retroceder");
 const productos = document.querySelectorAll(".producto");
 const descripciones = document.querySelectorAll(".cont_descripcion");
+const dotsContainer = document.querySelector("[data-catalogo-dots]");
 
 let indice = 0;
 let direccion = 1;
 const categorias = Array.from(slides).map((slide) => slide.dataset.categoria);
+let dots = [];
+
+function renderDots() {
+    if (!dotsContainer || slides.length === 0) return;
+
+    dotsContainer.innerHTML = "";
+    dots = Array.from(slides).map((_, index) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "catalogo_dot";
+        dot.setAttribute("aria-label", `Ir a categoría ${index + 1}`);
+        dot.addEventListener("click", () => {
+            direccion = index > indice ? 1 : -1;
+            indice = index;
+            actualizarSlider();
+        });
+        dotsContainer.appendChild(dot);
+        return dot;
+    });
+}
+
+function actualizarDots() {
+    dots.forEach((dot, i) => {
+        dot.classList.toggle("is-active", i === indice);
+    });
+}
 
 function actualizarSlider() {
     pintarEstadoSlides();
     filtrarProductos();
     filtrarDescripcion();
+    actualizarDots();
 }
 
 if (btnNext) {
@@ -93,5 +121,6 @@ function filtrarDescripcion() {
 }
 
 if (slides.length > 0) {
+    renderDots();
     actualizarSlider();
 }

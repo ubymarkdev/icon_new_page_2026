@@ -72,20 +72,46 @@
         const slides = Array.from(slider.querySelectorAll('.slide_slide'));
         const prevBtn = slider.querySelector('[data-prev]');
         const nextBtn = slider.querySelector('[data-next]');
+        const dotsContainer = slider.querySelector('[data-home-dots]');
 
         if (!track || slides.length === 0) return;
 
         let currentIndex = 0;
         let autoplayId = null;
         const autoplayDelay = 5000;
+        let dots = [];
 
         function normalize(index) {
             return (index + slides.length) % slides.length;
         }
 
+        function renderDots() {
+            if (!dotsContainer) return;
+            dotsContainer.innerHTML = '';
+
+            dots = slides.map(function (_, index) {
+                const dot = document.createElement('button');
+                dot.type = 'button';
+                dot.className = 'slider_dot';
+                dot.setAttribute('aria-label', `Ir al slide ${index + 1}`);
+                dot.addEventListener('click', function () {
+                    goTo(index);
+                });
+                dotsContainer.appendChild(dot);
+                return dot;
+            });
+        }
+
+        function updateDots() {
+            dots.forEach(function (dot, index) {
+                dot.classList.toggle('is-active', index === currentIndex);
+            });
+        }
+
         function goTo(index) {
             currentIndex = normalize(index);
             track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            updateDots();
         }
 
         function next() {
@@ -119,6 +145,7 @@
             goTo(currentIndex);
         });
 
+        renderDots();
         goTo(0);
         startAutoplay();
     }
@@ -128,6 +155,7 @@
         const viewport = section.querySelector('.clientes_viewport');
         const prevBtn = section.querySelector('[data-client-prev]');
         const nextBtn = section.querySelector('[data-client-next]');
+        const dotsContainer = section.querySelector('[data-client-dots]');
         const baseCards = Array.from(section.querySelectorAll('.cliente_card'));
 
         if (!track || baseCards.length === 0) return;
@@ -171,6 +199,7 @@
         let bgShift = 0;
         const bgStep = 20;
         const bgMax = 88;
+        let dots = [];
 
         function getPerView() {
             if (window.innerWidth <= 900) return 1;
@@ -190,6 +219,36 @@
             if (featuredCard) {
                 featuredCard.classList.add('is-featured');
             }
+        }
+
+        function renderDots() {
+            if (!dotsContainer) return;
+            dotsContainer.innerHTML = '';
+
+            dots = baseCards.map(function (_, index) {
+                const dot = document.createElement('button');
+                dot.type = 'button';
+                dot.className = 'clientes_dot';
+                dot.setAttribute('aria-label', `Ir al cliente ${index + 1}`);
+                dot.addEventListener('click', function () {
+                    if (isTransitioning) return;
+                    logicalIndex = index;
+                    physicalIndex = (cardCount > 1 ? cloneCount : 0) + index;
+                    updatePosition(false);
+                    stopAutoplay();
+                    startAutoplay();
+                });
+                dotsContainer.appendChild(dot);
+                return dot;
+            });
+        }
+
+        function updateDots() {
+            if (dots.length === 0) return;
+            const normalizedIndex = ((logicalIndex % cardCount) + cardCount) % cardCount;
+            dots.forEach(function (dot, index) {
+                dot.classList.toggle('is-active', index === normalizedIndex);
+            });
         }
 
         function updatePosition(animate) {
@@ -215,6 +274,7 @@
             }
 
             setFeaturedCard(physicalIndex);
+            updateDots();
         }
 
         function moveBackground(direction) {
@@ -284,6 +344,8 @@
         });
 
         updatePosition(false);
+        renderDots();
+        updateDots();
         startAutoplay();
     }
 

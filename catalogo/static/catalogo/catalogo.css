@@ -128,6 +128,32 @@
     background: var(--primary);
 }
 
+.catalogo_dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5vw;
+    margin-top: 1.042vw;
+}
+
+.catalogo_dot {
+    width: 0.625vw;
+    height: 0.625vw;
+    min-width: 10px;
+    min-height: 10px;
+    padding: 0;
+    appearance: none;
+    cursor: pointer;
+    border-radius: 50%;
+    background: rgba(23, 94, 172, 0.35);
+    border: 1px solid rgba(23, 94, 172, 0.8);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.catalogo_dot.is-active {
+    background: var(--primary);
+    transform: scale(1.15);
+}
+
 .tipo_de_piedra {
     display: grid;
     grid-template-columns: repeat(4, 10.417vw);
@@ -201,18 +227,19 @@
     .slide.is-active{
     display: flex;
     order: 2;
-    width: 73.333vw;
-    height: 36.667vw;
+    width: 74vw;
+    max-width: 74vw;
+    height: 38vw;
     opacity: 1;
     transform: scale(1);
     box-shadow: 0 0 0 4px var(--primary);
 
 }
 .slide.is-side {
-    display: flex;
-    opacity: 0.9;
-    width: 20vw;
-    height: 16.667vw;
+    display: none;
+    opacity: 0;
+    width: 0;
+    height: 0;
     transform: scale(0);
 }
 .slider_categorias div {
@@ -227,12 +254,30 @@
     align-items: center;
     justify-content: center;
     gap: 0;
-    min-height: 39vw;
+    min-height: calc(38vw + 6px);
+    padding-top: 6px;
+    }
+
+.slider_btn {
+    top: 24vw;
+}
+
+.boton_retroceder {
+    left: 8vw;
+}
+
+.boton_avanzar {
+    right: 8vw;
 }
 
 .categoria_descripcion {
     text-align: center;
     height: 21.75vw;
+}
+
+.catalogo_dots {
+    gap: 1.111vw;
+    margin-top: 2.5vw;
 }
 
 .cont_descripcion p {
@@ -242,22 +287,33 @@
 .tipo_de_piedra {
     display: grid;
     grid-template-columns: repeat(2, 30vw);
-    column-gap: 0;
+    column-gap: 1;
     row-gap: 6.25vw;
-    justify-items: start;
+    justify-items: center;
     justify-content: center;
 } 
 
+.producto {
+    display: flex;
+    justify-content: center;
+}
+
+.producto_link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .producto_img{
-    height: 23.333vw;
-    width: 23.333vw;
+    height: 29.166vw;
+    width: 29.166vw;
     display: block;
 }
 
 .producto_media {
     position: relative;
-    width: 23.333vw;
-    height: 23.333vw;
+    width: 29.166vw;
+    height: 29.166vw;
     transition: transform 0.6s cubic-bezier(0.25, 0.9, 0.35, 1);
 }
 
@@ -266,17 +322,25 @@
     color: var(--secondary);
     font-size: 11px;
     margin-top: 10px;
+    width: 29.166vw;
+    max-width: 29.166vw;
+    text-align: left;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.25;
 }
 
 .producto_etiqueta_oferta {
-    right: -20px;
+    right: 0;
 }
 
 .slider_categorias {
     position: relative;
-    width: 80vw;
-    margin: 0 auto 0;
+    width: 100%;
+    max-width: none;
+    margin: 5vw 0 0;
     padding: 0;
+    box-sizing: border-box;
     justify-items: center;
     overflow: hidden;
    
