@@ -16,7 +16,7 @@
 .slider_categorias div {
     color: var(--bg);
     font-size: 46px;
-    font-family: 'Segoe UI';
+    font-family: "Inter", sans-serif;
     font-weight: 300;
     text-shadow: 2px 1px 10px #000000;
 }
@@ -60,7 +60,7 @@
 
 .cont_descripcion p {
     color: #58585A;
-    font-family: 'Segoe UI';
+    font-family: "Inter", sans-serif;
     font-size: 20px;
     font-weight: 200;
     text-shadow: none;
@@ -178,7 +178,7 @@
 }
 
 .producto_nombre {
-    font-family: 'Segoe UI';
+    font-family: "Inter", sans-serif;
     color: var(--secondary);
     font-size: 15px;
     margin-top: 10px;
@@ -215,7 +215,7 @@
 .slider_categorias div {
     color: var(--bg);
     font-size: 26px;
-    font-family: 'Segoe UI';
+    font-family: "Inter", sans-serif;
     font-weight: 300;
     text-shadow: 2px 1px 10px #000000;
 }
@@ -259,7 +259,7 @@
 }
 
 .producto_nombre {
-    font-family: 'Segoe UI';
+    font-family: "Inter", sans-serif;
     color: var(--secondary);
     font-size: 11px;
     margin-top: 10px;

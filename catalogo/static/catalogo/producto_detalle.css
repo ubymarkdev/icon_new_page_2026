@@ -75,7 +75,7 @@
     margin: 0 0 28px;
     color: var(--primary);
     font-size: clamp(25px, 4vw, 50px);
-    font-family: 'Segoe UI', sans-serif;
+    font-family: "Inter", sans-serif;
     line-height: 1.1;
 }
 
@@ -87,7 +87,7 @@
     margin: 0 0 10px;
     color: var(--primary);
     font-size: 60px;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 300;
 }
 
@@ -97,7 +97,7 @@
     font-size: 30px;
     font-weight: 200;
     line-height: 1.45;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 .producto_cta {
@@ -112,7 +112,7 @@
     background-color: #175EAC;
     color: var(--bg);
     font-size: 22px;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 600;
 }
 
