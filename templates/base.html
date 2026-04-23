@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
@@ -49,9 +50,9 @@
             <a href="/" class="icono_home">
                 <img src="{% static 'img/logo icon.png' %}" alt="Logo Icon Stone" class="logo_icon">
             </a> 
-            <button class="menu_movil" id="abrir">Abrir</button>
+            <button class="menu_movil" id="abrir"><i class="bi bi-list"></i></button>
         <nav class="nav" id="nav">
-            <button class="cerrar_menu" id="cerrar"> Cerrar</button>      
+            <button class="cerrar_menu" id="cerrar"><i class="bi bi-x"></i></button>      
             <section class="contenedor_header" >
                 <a href="/" class="{% if request.path == '/' %}is-active{% endif %}">Inicio </a>
                 <a href="/cosentino/" class="{% if '/cosentino/' in request.path %}is-active{% endif %}">Cosentino</a>
@@ -59,8 +60,6 @@
                 <a href="/formulario/" class="{% if '/formulario/' in request.path %}is-active{% endif %}">Contáctanos</a>
                 <a href="/blog/" class="{% if '/blog/' in request.path %}is-active{% endif %}">Blog</a>
             </section>
-            
-
         </nav>
         
     </header>
