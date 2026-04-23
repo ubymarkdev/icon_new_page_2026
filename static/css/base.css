@@ -140,10 +140,13 @@ header .contenedor_header a.is-active {
     bottom: 0px;
     top: -10px;
     display: flex;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
     }
     .nav.visible {
         opacity: 1;
         visibility: visible;
+        transform: translateX(0);
     }
 
     .contenedor_header {
