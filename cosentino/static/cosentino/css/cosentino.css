@@ -36,7 +36,6 @@
     position: relative;
     z-index: 1; /* asegura que el texto quede encima */
     color: white;
-    font-family: 'Segoe UI';
     font-weight: 100;
     font-size: 40px;
     text-align: center;
@@ -70,25 +69,30 @@
 }
 
 .hero_dekton {
-    background-image: url("/static/img/collage_fondo_dekton.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.cont_logo_dekton{
+.cont_logo_dekton {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;
-    background: rgba(0, 0, 0, 0.3);
     padding-bottom: 1.042vw;
     padding-top: 1.042vw;
-    background-size: contain;
+    width: 115%;
+    height: 40vw;
+    background-image: url();
+    background: linear-gradient(
+      rgba(0,0,0,0.4), 
+      rgba(0,0,0,0.4)
+    ),
+    url("/static/img/DK Andreas Showflat.jpg") no-repeat;
+    background-size: cover;
+    background-position-x: -6vw;
+    background-position-y: bottom;
 }
+
 
 .cont_caracteristicas_dekton{
     display: flex;
@@ -100,16 +104,25 @@
 
 .caractaristicas_dekton {
     display: flex;
-    gap: 2.604vw;
+    gap: 8vw;
     flex-direction: column;
+    width: 90%;
 }
 
 .caractaristicas_dekton p{
     text-align: center;
-    color: var(--bg);
+}
+
+.press_dk {
+    color: var(--primary);
+    font-size: 45px;
+    font-weight: 300;
+}
+
+.press_dk_info {
+    color: var(--secondary);
     font-size: 30px;
-    font-weight: 100;
-    font-family: 'Segoe UI';
+    font-weight: 200;
 }
 
 .logo_dekton_hdekton {
@@ -132,10 +145,9 @@
 }
 
 .simbolos p {
-    font-family: 'Segoe UI';
-    color: var(--bg);
+    color: var(--secondary);
     font-size: 20px;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.9);
+
 }
 
 .img_hdekton {
@@ -205,14 +217,12 @@
 .aplicaciones_dk_imagen1_popover p{
     color: var(--bg);
     font-size: 20px;
-    font-family: 'Segoe UI';
     font-weight: 200;
 }
 
 .aplicaciones_dk_imagen1_popover a {
     color: var(--bg);
     text-decoration: none;
-    font-family: 'Segoe UI';
     background-color: #175EAC;
     padding: 3px;
     border-radius: 5px;
@@ -260,14 +270,12 @@
 .aplicaciones_dk_imagen2_popover p{
     color: var(--bg);
     font-size: 20px;
-    font-family: 'Segoe UI';
     font-weight: 200;
 }
 
 .aplicaciones_dk_imagen2_popover a {
     color: var(--bg);
     text-decoration: none;
-    font-family: 'Segoe UI';
     background-color: #175EAC;
     padding: 3px;
     border-radius: 5px;
@@ -314,14 +322,12 @@
 .aplicaciones_dk_imagen3_popover p{
     color: var(--bg);
     font-size: 20px;
-    font-family: 'Segoe UI';
     font-weight: 200;
 }
 
 .aplicaciones_dk_imagen3_popover a {
     color: var(--bg);
     text-decoration: none;
-    font-family: 'Segoe UI';
     background-color: #175EAC;
     padding: 3px;
     border-radius: 5px;
@@ -367,14 +373,12 @@
 .aplicaciones_dk_imagen4_popover p{
     color: var(--bg);
     font-size: 20px;
-    font-family: 'Segoe UI';
     font-weight: 200;
 }
 
 .aplicaciones_dk_imagen4_popover a {
     color: var(--bg);
     text-decoration: none;
-    font-family: 'Segoe UI';
     background-color: #175EAC;
     padding: 3px;
     border-radius: 5px;
@@ -415,13 +419,11 @@
 .aplicaciones_dk_info_2 h3 {
     color: var(--primary);
     font-size: 50px;
-    font-family: 'Segoe UI';
     font-weight: 300;
 
 }
 
 .aplicaciones_dk_info_2 a{
-    font-family: 'Segoe UI';
     height: 60px;
     width: 210px;
     text-decoration: none;
@@ -434,3 +436,216 @@
     justify-content: center;
 }
 
+@media (max-width: 480px) { 
+.dekton_video_hero_contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16.083vw;
+}
+.logo_cosentino {
+    height: 11.167vw;
+    width: auto;
+}
+
+.dekton_video_hero_contenido p {
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-weight: 100;
+    font-size: 24px;
+    text-align: center;
+}
+.cont_logos_cosentino {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 0.813vw;
+}
+.logo_dekton {
+    height: 9.646vw;
+    width: auto;
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: 3vw;
+}
+.logo_silestone {
+    height: 6.604vw;
+    width: auto;
+    grid-row: 2;
+    grid-column: 2;
+}
+.logo_sensa {
+    height: 5.083vw;
+    width: auto;
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.hero_dekton {
+    overflow-x: hidden;
+}
+
+.cont_logo_dekton {
+    width: 135%;
+    box-sizing: border-box;
+    height: 70vw;
+}
+.cont_caracteristicas_dekton,
+.caractaristicas_dekton {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.logo_dekton_hdekton {
+    height: 15vw;
+    width: auto;
+}
+
+.cont_caracteristicas_dekton {
+    padding-inline: 5vw;
+}
+
+.caractaristicas_dekton > p {
+    font-size: 20px;
+    line-height: 1.25;
+    max-width: 100%;
+    margin: 0;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.caractaristicas_dekton {
+    padding-top: 5vw;
+}
+
+.simbolos {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-rows: repeat(2, auto);
+    column-gap: 4vw;
+    justify-items: center;
+    align-items: start;
+}
+
+.simbolos img {
+    height: 15vw;
+    width: auto;
+    align-self: center;
+}
+
+.simbolos p {
+    font-size: 12px;
+    font-weight: 300
+}
+
+.simbolos .cont_dk_car {
+    width: 100%;
+    max-width: 120px;
+    align-items: center;
+    text-align: center;
+}
+
+.simbolos .cont_dk_car:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.simbolos .cont_dk_car:nth-child(2) {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.simbolos .cont_dk_car:nth-child(3) {
+    grid-column: 5;
+    grid-row: 1;
+}
+
+.simbolos .cont_dk_car:nth-child(4) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.simbolos .cont_dk_car:nth-child(5) {
+    grid-column: 4;
+    grid-row: 2;
+}
+
+.aplicaciones_dk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.aplicaciones_dk_imagenes {
+    width: 100%;
+    height: auto;
+    margin-inline: 0;
+    padding-inline: 10px;
+    box-sizing: border-box;
+    gap: 6px;
+    align-items: stretch;
+    order: 2;
+}
+
+.aplicaciones_dk_info {
+    width: 100%;
+    margin-inline: 0;
+    padding-inline: 10px;
+    box-sizing: border-box;
+    padding-left: 0;
+    order: 1;
+    align-items: center;
+}
+.cont_imagenes {
+    width: 100%;
+    gap: 6px;
+}
+
+.aplicaciones_dk_info_2 h3 {
+    color: var(--primary);
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.aplicaciones_dk_info_2 a {
+    display: none;
+}
+
+.aplicaciones_dk_fila {
+    width: 100%;
+    gap: 6px;
+}
+
+.aplicaciones_dk_fila_top {
+    display: grid;
+    grid-template-columns: 4.09fr 1fr;
+    margin-bottom: 0;
+}
+
+.aplicaciones_dk_fila_bottom {
+    display: grid;
+    grid-template-columns: 0.946fr 1fr;
+}
+
+.aplicaciones_dk_imagen1,
+.aplicaciones_dk_imagen2,
+.aplicaciones_dk_imagen3,
+.aplicaciones_dk_imagen4 {
+    width: 100%;
+    height: 30vw;
+}
+
+.aplicaciones_dk_info {
+    width: 100%;
+    margin-inline: 0;
+    padding-inline: 10px;
+    box-sizing: border-box;
+    padding-left: 0;
+}
+}
