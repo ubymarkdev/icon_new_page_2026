@@ -436,6 +436,114 @@
     justify-content: center;
 }
 
+.formatos {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20vw;
+    gap: 10vw;
+}
+
+.formato, .grosor {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.formato img, .grosor img {
+    height: 45vw;
+    width: auto;
+}
+
+.grosor img {
+    order:1
+}
+
+.formato h4, .grosor h4 {
+    color: var(--primary);
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.formato p, .grosor p { 
+    color: var(--secondary);
+    font-size: 15px;
+    line-height: normal;
+
+}
+
+.grosor p, .grosor h4 {
+    text-align: right;
+}
+
+.versatilidad {
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+}
+
+.revestimientos {
+    background-image: url("/static/img/DK Fam Dubai Lunar.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -98vw;
+    background-position-x: -6vw;
+    height: 80vw;
+    padding: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.revestimientos p, .revestimientos h4, .fachada p, .fachada h4 {
+    color: var(--bg);
+    text-shadow: 2px 2px 4px black;
+}
+
+.revestimientos h4, .fachada h4 {
+    font-size: 20px;
+    font-weight: 300;
+}
+.revestimientos p, .fachada p {
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.fachada {
+    background-image: url("/static/img/DK Saadiyat Abu Dhab Valterra.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -16vw;
+    background-position-x: 6vw;
+    height: 80vw;
+    padding: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dk_versatilidad_boton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5vw;
+}
+
+
+.dk_versatilidad a {
+    text-decoration: none;
+    background-color: var(--primary);
+    color: var(--bg);
+    text-align: center;
+    padding: 1vw;
+    border-radius: 2vw;
+    font-weight: 300;
+}
+
+
 @media (max-width: 480px) { 
 .dekton_video_hero_contenido {
     display: flex;
