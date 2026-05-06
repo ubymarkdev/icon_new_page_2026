@@ -194,6 +194,7 @@
     height: 100%;
     object-fit: cover;
     display: block;
+    border-radius: 2vw;
 }
 
 .producto_etiqueta_oferta {
@@ -308,6 +309,7 @@
     height: 29.166vw;
     width: 29.166vw;
     display: block;
+    border-radius: 7vw;
 }
 
 .producto_media {

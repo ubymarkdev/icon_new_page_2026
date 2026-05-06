@@ -7,6 +7,8 @@
 
 .formulario {
     padding-top: 3.281vw;
+    background-color: #F7F7F7;
+
 }
 
 .contenedor_contactanos{
@@ -14,13 +16,14 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    background-color: #F7F7F7;
 }
 
 
 .contenedor_contactanos h2{
     color: #175EAC;
     font-family: 'Segoe UI';
-    font-size: 72px;
+    font-size: 45px;
     font-weight: 200;
 }
 
@@ -33,6 +36,8 @@
     align-items: center;
     justify-content: center;
     padding: 2.292vw 0.99vw;
+    background-color: #F7F7F7;
+    align-items: start;
 }
 
 .contenedor_form {
@@ -64,15 +69,15 @@
     height: 44px;
     border: 0;
     border-radius: 10px;
-    background: var(--gray-input);
-    color: #fff;
-    font-size: 20px;
+    background: #eaeaea;;
+    color: #808080;
+    font-size: 17px;
     padding: 0 13px;
     width: 100%;
 }
 
 .contact-input::placeholder {
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.85); 
 }
 
 .contact-select {
@@ -96,8 +101,6 @@
 .campo-telefono input.contact-input {
     height: 48px;
     border-radius: 12px;
-    background-color: #b3b3b3;
-    color: #f2f2f2;
 }
 
 .campo-telefono select.contact-select {
@@ -158,9 +161,9 @@
 
 }
 .formulario-wrapper {
-    background: var(--bg);
     display: flex;
     justify-content: flex-start;
+    padding: 5vw;
 
 }
 
@@ -180,14 +183,13 @@
 }
 
 .contact-input, .contact-select {
-    height: 30px;
+    height: 25px;
     border-radius: 10px;
-    color: #fff;
     font-size: 13px;
 }
 
 .campo-telefono select.contact-select, .campo-telefono input.contact-input {
-    height: 30px;
+    height: 25px;
 }
 .campo-submit button {
     padding: 2px 9px;
@@ -197,11 +199,11 @@
 @media (max-width: 900px) {
     .contenedor_form form {
         grid-template-columns: 1fr;
-        gap: 1.444vw;
+        gap: 3vw;
     }
 
     .campo label {
-        font-size: 24px;
+        font-size: 18px;
     }
 
     .telefono-compuesto {
@@ -213,4 +215,16 @@
         width: 100%;
         min-width: 0;
     }
+
+    .campo-submit {
+    align-self: end;
+    padding-top: 5vw;}
+
+    .btn-whatsapp-icon {
+    width: 36px;
+    height: auto;
+    top: -23px;
+    right: -19px;
+    }
+
 }
