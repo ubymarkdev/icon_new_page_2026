@@ -1,4 +1,4 @@
-{% extends "base.html" %} 
+﻿{% extends "base.html" %} 
 
 {% load static %}
 
@@ -12,8 +12,8 @@
 
 
 <section class="dekton_video_hero">
-    <video autoplay muted loop class="video_fondo">
-            <source src="/static/img/Vídeo Dekton Hero.mp4" type="video/mp4">
+    <video autoplay muted loop playsinline webkit-playsinline class="video_fondo">
+            <source src="{% static 'img/Vídeo Dekton Hero.mp4' %}" type="video/mp4">
     </video>
     <div class="dekton_video_hero_contenido">
         <img src="/static/img/Logo cosentino blanco 1.png" alt="" class="logo_cosentino">
@@ -33,7 +33,7 @@
         </div>
         <div class="caractaristicas_dekton">
                 <p class="press_dk"> ¿QUÉ ES DEKTON?</p>
-                <p class="press_dk_info"> Dekton es una superficie ultracompacta, desarrollada por Cosentino con  miníma porosidad y alta resistencia al calor. 
+                <p class="press_dk_info"> Dekton es una superficie ultracompacta, desarrollada por Cosentino con  minÃ­ma porosidad y alta resistencia al calor. 
                 </p>
                 <div class="simbolos">
 
@@ -53,7 +53,7 @@
                     </div>
 
                     <div class="cont_dk_car" data-aos="animate__zoomIn" data-aos-delay="0"  data-aos-duration="1000">
-                        <img src="/static/img/resistencia_abrasión.png" alt="">
+                        <img src="/static/img/resistencia_abrasion.png" alt="">
                         <p>Resistencia a la <br> abrasión</p>
                     </div>
 
@@ -116,7 +116,7 @@
         <div class="aplicaciones_dk_info">
             <div class="aplicaciones_dk_info_2 animate__animated animate__backInDown">
                 <h3>APLICACIONES <br> DEKTON</h3>
-                <a href="/catalogo">Descubre más aplicaciones de Dekton</a>
+                <a href="/catalogo">Descubre mÃ¡s aplicaciones de Dekton</a>
             </div>
         </div>
 
@@ -124,3 +124,4 @@
 </section>
 
 {% endblock %}
+

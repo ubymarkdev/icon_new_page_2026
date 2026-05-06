@@ -149,6 +149,51 @@
     pointer-events: none;
 }
 
+
+@media (max-width: 480px) {
+.contenedor_contactanos h2 {
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+
+}
+.formulario-wrapper {
+    background: var(--bg);
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.campo {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
+
+.contenedor_form {
+    width: 100%;
+}
+
+.campo label {
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.contact-input, .contact-select {
+    height: 30px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 13px;
+}
+
+.campo-telefono select.contact-select, .campo-telefono input.contact-input {
+    height: 30px;
+}
+.campo-submit button {
+    padding: 2px 9px;
+    font-size: 15px;
+}
+}
 @media (max-width: 900px) {
     .contenedor_form form {
         grid-template-columns: 1fr;
