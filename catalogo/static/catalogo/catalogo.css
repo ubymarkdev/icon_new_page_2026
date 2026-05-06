@@ -165,7 +165,6 @@
 
 .producto {
     width: 100%;
-    transition: transform 0.6s cubic-bezier(0.25, 0.9, 0.35, 1);
 }
 
 .producto_link {
@@ -178,7 +177,21 @@
     width: 100%;
     aspect-ratio: 1 / 1;
     height: auto;
-    transition: transform 0.6s cubic-bezier(0.25, 0.9, 0.35, 1);
+    border-radius: 2vw;
+    transition: filter 0.8s ease;
+}
+
+.producto_media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../img/degradado_cristal.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 1;
+    transition: opacity 0.8s ease;
 }
 
 .producto.is-hidden {
@@ -194,7 +207,7 @@
     height: 100%;
     object-fit: cover;
     display: block;
-    border-radius: 2vw;
+    border-radius: 2.4vw;
 }
 
 .producto_etiqueta_oferta {
@@ -214,14 +227,14 @@
     margin-top: 10px;
 }
 
-.producto:hover,
-.producto:focus-within {
-    transform: scale(1.02);
+.producto:hover .producto_media,
+.producto:focus-within .producto_media {
+    filter: brightness(0.78);
 }
 
-.producto:hover .producto_img,
-.producto:focus-within .producto_media {
-    transform: scale(1.05);
+.producto:hover .producto_media::after,
+.producto:focus-within .producto_media::after {
+    opacity: 0;
 }
 
 @media (max-width: 480px) {
@@ -316,7 +329,8 @@
     position: relative;
     width: 29.166vw;
     height: 29.166vw;
-    transition: transform 0.6s cubic-bezier(0.25, 0.9, 0.35, 1);
+    border-radius: 7vw;
+    transition: filter 0.8s ease;
 }
 
 .producto_nombre {
