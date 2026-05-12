@@ -11,6 +11,56 @@ let direccion = 1;
 const categorias = Array.from(slides).map((slide) => slide.dataset.categoria);
 let dots = [];
 
+function attachSwipeNavigation(container, onSwipeLeft, onSwipeRight, options) {
+    if (!container || typeof onSwipeLeft !== "function" || typeof onSwipeRight !== "function") return;
+
+    const config = Object.assign(
+        {
+            minDistance: 45,
+            maxVerticalRatio: 1.2,
+        },
+        options || {}
+    );
+
+    let startX = 0;
+    let startY = 0;
+    let isTouching = false;
+
+    container.addEventListener(
+        "touchstart",
+        (event) => {
+            if (!event.touches || event.touches.length !== 1) return;
+            isTouching = true;
+            startX = event.touches[0].clientX;
+            startY = event.touches[0].clientY;
+        },
+        { passive: true }
+    );
+
+    container.addEventListener(
+        "touchend",
+        (event) => {
+            if (!isTouching || !event.changedTouches || event.changedTouches.length !== 1) return;
+            isTouching = false;
+
+            const endX = event.changedTouches[0].clientX;
+            const endY = event.changedTouches[0].clientY;
+            const deltaX = endX - startX;
+            const deltaY = endY - startY;
+
+            if (Math.abs(deltaX) < config.minDistance) return;
+            if (Math.abs(deltaX) <= Math.abs(deltaY) * config.maxVerticalRatio) return;
+
+            if (deltaX < 0) {
+                onSwipeLeft();
+            } else {
+                onSwipeRight();
+            }
+        },
+        { passive: true }
+    );
+}
+
 function renderDots() {
     if (!dotsContainer || slides.length === 0) return;
 
@@ -41,22 +91,6 @@ function actualizarSlider() {
     filtrarProductos();
     filtrarDescripcion();
     actualizarDots();
-}
-
-if (btnNext) {
-    btnNext.addEventListener("click", () => {
-        direccion = 1;
-        indice = (indice + 1) % slides.length;
-        actualizarSlider();
-    });
-}
-
-if (btnPrev) {
-    btnPrev.addEventListener("click", () => {
-        direccion = -1;
-        indice = (indice - 1 + slides.length) % slides.length;
-        actualizarSlider();
-    });
 }
 
 function filtrarProductos() {
@@ -121,6 +155,21 @@ function filtrarDescripcion() {
 }
 
 if (slides.length > 0) {
+    const nextSlide = () => {
+        direccion = 1;
+        indice = (indice + 1) % slides.length;
+        actualizarSlider();
+    };
+    const prevSlide = () => {
+        direccion = -1;
+        indice = (indice - 1 + slides.length) % slides.length;
+        actualizarSlider();
+    };
+
+    if (btnNext) btnNext.addEventListener("click", nextSlide);
+    if (btnPrev) btnPrev.addEventListener("click", prevSlide);
+    attachSwipeNavigation(track, nextSlide, prevSlide);
+
     renderDots();
     actualizarSlider();
 }
