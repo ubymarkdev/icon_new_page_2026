@@ -28,6 +28,7 @@
 .slide_slide {
     min-width: 100%;
     position: relative;
+    height: 35vw;
 }
 
 .slide_slide img {
@@ -35,23 +36,17 @@
     width: 100%;
     height: 31.25vw;
     object-fit: cover;
+    height: 100%;
 }
 
-@media (max-width: 480px) { .slide_slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-      
-}
+
 
 .slider_caption {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: min(90%, 39.583vw);
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,10 +55,11 @@
     text-align: center;
     color: var(--bg);
     z-index: 2;
+    padding: 5vw;
 }
 
 .slider_caption h2 {
-    font-size: 45px;
+    font-size: 270%;
     font-weight: 400;
     margin: 10px;
     text-shadow: 1px 2px 8px rgba(0, 0, 0, 2);
@@ -72,7 +68,7 @@
 
 
 .slider_caption p {
-    font-size: 35px;
+    font-size: 200%;
     font-weight: 200;
     margin: 10px;
     text-shadow: 1px 2px 8px rgba(0, 0, 0, 2);
@@ -165,12 +161,12 @@
 }
 
 .identidad_icon {
+    height: 100%;
     --marble-offset: 0px;
     position: relative;
     overflow: hidden;
     padding: 2.5vw 4.167vw 2.917vw;
     border-radius: 4px;
-    height: 52.083vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -230,31 +226,31 @@
     height: auto;
 }
 
-@media (max-width: 1024px) {
-    .identidad_icon {
+
+.identidad_icon {
         padding: 36px 28px 42px;
     }
 
-    .identidad_titulo {
+.identidad_titulo {
         font-size: 40px;
     }
 
-    .identidad_contenido {
+.identidad_contenido {
         width: 100%;
         flex-direction: column;
         gap: 24px;
     }
 
-    .identidad_texto {
+.identidad_texto {
         font-size: 32px;
         text-align: center;
     }
 
-    .identidad_logo {
+.identidad_logo {
         width: 220px;
         justify-self: center;
     }
-}
+
 
 .con_cont_valores{
     font-size: 30px;
@@ -265,6 +261,8 @@
     flex-direction: row;
     align-items: center;
     align-content:center;
+    gap: 5vw;
+    align-items: center;
 }
 
 .con_cont_valores{
@@ -273,10 +271,6 @@
     align-items: center;
 }
 
-.icons_valores {
-    gap: 7.813vw;
-    align-items: center;
-}
 
 .con_cont_valores h2{
     color: #175EAC;
@@ -407,14 +401,14 @@
 
 .clientes_nav {
     position: absolute;
-    top: 50%;
+    top: 38%;
     transform: translateY(-50%);
     width: 34px;
     height: 34px;
     border: 0;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.9);
-    color: #444;
+    background: var(--primary);
+    color: #ffffff;
     cursor: pointer;
     display: grid;
     place-items: center;
@@ -428,7 +422,7 @@
 }
 
 .clientes_nav--prev {
-    left: -4px;
+    left: -45px;
 }
 
 .clientes_nav--prev::before {
@@ -436,7 +430,7 @@
 }
 
 .clientes_nav--next {
-    right: -4px;
+    right: -45px;
 }
 
 .clientes_nav--next::before {
@@ -467,45 +461,6 @@
 
 .cotizar_proyecto:hover {
     background: #0f4f93;
-}
-
-@media (max-width: 900px) {
-    .clientes_slider_section {
-        min-height: 560px;
-        padding: 54px 36px;
-    }
-
-    .cliente_card {
-        flex-basis: 100%;
-    }
-}
-
-@media (max-width: 640px) {
-    .clientes_slider_section {
-        min-height: 520px;
-        padding: 44px 20px;
-    }
-
-    .clientes_title {
-        margin-bottom: 28px;
-    }
-
-    .cliente_card {
-        flex-basis: 100%;
-        padding: 0 10px;
-    }
-
-    .cliente_media {
-        height: 220px;
-    }
-
-    .clientes_nav--prev {
-        left: 0;
-    }
-
-    .clientes_nav--next {
-        right: 0;
-    }
 }
 
 .proceso_ubicacion {
@@ -593,6 +548,7 @@
 
 .mapa_contenido {
     align-content: start;
+    width: 50%;
 }
 
 .ubicacion_contenido h4{
@@ -615,7 +571,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 1.042vw;
+    gap: 0;
 }
 
 
@@ -632,6 +588,11 @@
 .proceso p{
     font-size: 20px;
     color: var(--secondary);
+}
+
+.flechas {
+    height: 8vw;
+    width: auto;
 }
 
 .iconos_proceso {
@@ -674,7 +635,323 @@
     align-content: center;
 }
 
+
+@media (max-width: 820px) {
+
+    .slide_slide {
+    height: 50vw;
+}
+
+    .slider_caption h2 {
+    font-size: 3vw;
+    }
+
+    .slider_caption h2 {
+    font-size: 3vw;
+
+    }
+
+    .icons_valores {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 20.833vw);
+        gap: 2vw 1.25vw;
+        justify-items: center;
+        align-items: start;
+        margin-bottom: 10.417vw;
+    }
+
+    .val_asesoria {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .val_materiales {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .val_catalogo {
+        grid-column: 3;
+        grid-row: 3;
+    }
+
+    .val_importadores {
+        order: 4;
+        grid-column: 4;
+        grid-row: 2;;
+    }
+
+    .val_confianza {
+        grid-column: 4;
+        grid-row: 1;
+        margin-right:0px
+
+    }
+
+    .cont img {
+        height: 20.833vw;
+        width: auto;
+        object-fit: contain;
+    }
+
+    .icons_valores p {
+        font-size: 15px;
+        line-height: 1.2;
+    }
+    .clientes_nav {
+    position: absolute;
+    top: 45%;
+}
+    
+    .clientes_slider_section {
+        min-height: 520px;
+        padding: 44px 20px;
+    }
+
+    .clientes_title {
+        margin-bottom: 28px;
+    }
+
+    .cliente_card {
+        flex-basis: 100%;
+        padding: 0 10px;
+    }
+
+    .cliente_media {
+        height: 220px;
+    }
+
+    .clientes_nav--prev {
+        left: -45px;
+    }
+
+    .clientes_nav--next {
+        right: -45px;;
+    }
+    .proceso p {
+    font-size: 15px;
+    }
+    .boton_proceso {
+
+    width: 115px;
+    height: 60px;
+    }
+    .ubicacion_contenido {
+    flex-direction: column;
+    order: 1;
+    align-items: center;
+    text-align: center;
+    }
+    .mapa_contenido {
+    order: -1;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    }
+}
+
+
+@media (max-width: 768px) {
+    
+
+
+.identidad_icon {
+    height: 100%;
+    }
+
+        .icons_valores {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 20.833vw);
+        gap: 20.833vw 1.25vw;
+        justify-items: center;
+        align-items: start;
+        margin-bottom: 10.417vw;
+    }
+
+    .val_asesoria {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .val_materiales {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .val_catalogo {
+        grid-column: 3;
+        grid-row: 3;
+    }
+
+    .val_importadores {
+        order: 4;
+        grid-column: 4;
+        grid-row: 2;;
+    }
+
+    .val_confianza {
+        grid-column: 4;
+        grid-row: 1;
+        margin-right:0px
+
+    }
+
+    .proceso_compra {
+        display: flex;
+        gap: 0 2.083vw;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .proceso_compra > img {
+        transform: rotate(90deg);
+        height: 70px;
+        width: auto;
+    }
+
+    .proceso {
+        gap: 15px;
+        align-self: auto;
+    }
+
+
+    .iconos_proceso {
+        height: 28px;
+    }
+
+
+    .atencion img {
+        height: 70px;
+        width: auto;
+    }
+
+    .contacto img {
+        height: 85px;
+        width: auto;
+    }
+
+    .cotizacion img {
+        height: 60px;
+        width: auto;
+    }
+
+    .anticipo img {
+        height: 85px;
+        width: auto;
+    }
+    .iconos_cotizacion {
+        height: 22px;
+        padding-bottom: 0;
+    }
+
+    
+    .proceso p {
+        font-size: 20px;
+        font-weight: 200;
+        line-height: 1.25;
+    }
+
+  
+    .boton_proceso {
+        width: auto;
+        height: auto;
+        padding: 7px 8px;
+        border-radius: 6px;
+        font-size: 15px;
+    }
+
+    .ubicacion_contenido {
+    flex-direction: column;
+    order: 1;
+    align-items: center;
+    text-align: center;
+    }
+    .mapa_contenido {
+    order: -1;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    }
+
+    .slider_viewport {
+    height: 65vw;
+    }
+    .slide_slide img {
+    height: 185%;
+    }
+
+    .clientes_nav {
+    position: absolute;
+    top: 45%;
+}
+    
+    .clientes_slider_section {
+        min-height: 520px;
+        padding: 44px 20px;
+    }
+
+    .clientes_title {
+        margin-bottom: 28px;
+    }
+
+    .cliente_card {
+        flex-basis: 100%;
+        padding: 0 10px;
+    }
+
+    .cliente_media {
+        height: 220px;
+    }
+
+    .clientes_nav--prev {
+        left: -45px;
+    }
+
+    .clientes_nav--next {
+        right: -45px;;
+    }
+    .proceso_compra {
+    flex-direction: column;
+}
+    .slider_caption {
+    width: 100%;
+}
+
+    .slider_caption {
+    top: 100%;
+    left: 50%;
+}
+
+.slider_caption h2 {
+    font-size: 35px;
+}
+
+.slider_caption p {
+    font-size: 25px;
+}
+}
+
+
+
 @media (max-width: 480px) {
+    .slider_viewport {
+    height: 90vw;
+    }
+
+    .slide_slide img {
+    display: block;
+    width: 100%;
+    height: 140%;
+    object-fit: cover;
+    }   
+
+    .slide_slide {
+    height: 70vw
+    }
     .slider {
         margin-top: 0;
     }
@@ -682,19 +959,21 @@
 
     .slider_caption {
         width: 92%;
-        gap: 5px;
+        gap: 5vw;
+        top: 65%;
+        left: 50%;
     }
 
     .slider_caption h2 {
         margin: 0;
-        font-size: 13px;
+        font-size: 5vw;
         font-weight: 400;
         line-height: 1.2;
     }
 
     .slider_caption p {
         margin: 0;
-        font-size: 10px;
+        font-size: 4vw;
         line-height: 1.2;
     }
 
@@ -741,7 +1020,7 @@
         font-size: 20px;
         line-height: 1.35;
         text-align: center;
-        width: 52.083vw;
+        width: 100%;
 
     }
 

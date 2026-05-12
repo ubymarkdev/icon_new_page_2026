@@ -441,6 +441,7 @@
     flex-direction: column;
     padding-top: 20vw;
     gap: 10vw;
+    padding: 2vw;
 }
 
 .formato, .grosor {
@@ -465,7 +466,7 @@
 
 .formato h4, .grosor h4 {
     color: var(--primary);
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 300;
 }
 
@@ -473,7 +474,7 @@
     color: var(--secondary);
     font-size: 15px;
     line-height: normal;
-
+    font-weight: 200;
 }
 
 .grosor p, .grosor h4 {
@@ -491,13 +492,14 @@
     background-image: url("/static/img/DK Fam Dubai Lunar.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-y: -98vw;
+    background-position-y: -118vw;
     background-position-x: -6vw;
-    height: 80vw;
+    height: 59vw;
     padding: 10vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: static;
 }
 .revestimientos p, .revestimientos h4, .fachada p, .fachada h4 {
     color: var(--bg);
@@ -505,11 +507,11 @@
 }
 
 .revestimientos h4, .fachada h4 {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 300;
 }
 .revestimientos p, .fachada p {
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 200;
 }
 
@@ -519,11 +521,15 @@
     background-repeat: no-repeat;
     background-position-y: -16vw;
     background-position-x: 6vw;
-    height: 80vw;
+    height: 59vw;
     padding: 10vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: static;
+    z-index: -1;
+    
+    
 }
 
 .dk_versatilidad_boton {
@@ -617,7 +623,7 @@
 }
 
 .caractaristicas_dekton > p {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.25;
     max-width: 100%;
     margin: 0;
@@ -688,7 +694,7 @@
     flex-direction: column;
     align-items: center;
     padding-top: 20vw;
-    padding-bottom: 15px;
+    padding-bottom: 10vw;
 }
 
 .aplicaciones_dk_imagenes {
@@ -813,4 +819,178 @@
 .aplicaciones_dk_imagen4_popover {
     bottom: 17%;
 }
+}
+
+@media (min-width: 768px) {
+
+.dekton_video_hero_contenido {
+    padding: 1vw;
+}
+.versatilidad {
+    padding-top: 10vw;
+}
+
+.simbolos {
+    gap: 2vw;
+    align-items: normal;
+}
+
+.simbolos img {
+    height: 9vw;
+    width: auto;
+}
+
+.aplicaciones_dk {
+    flex-direction: column;
+}
+.aplicaciones_dk_imagenes {
+    order: 1;
+    align-items: center;
+}
+.aplicaciones_dk_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-left: 0; 
+}
+
+.aplicaciones_dk_info_2 h3 {
+    text-align: center;
+}
+
+.aplicaciones_dk_info_2 a {
+    display: none;
+}
+
+.dk_versatilidad {
+    gap: 1vw;
+
+}
+.formatos {
+        flex-direction: column;
+        gap: 0;
+        padding: 3vw;
+    }
+.formato img, .grosor img {
+    height: 30vw;
+    width: auto;
+    padding: 3vw;
+  }
+
+.grosor img  {
+    order: 0;
+  }
+.info, .info p {
+    align-items: flex-start;
+
+}
+.grosor p, .grosor h4 {
+    text-align: left;
+}
+
+.grosor p, .formato p {
+    font-size: 25px;
+    font-weight: 200;
+}
+
+.grosor h4, .formato h4 {
+    font-size: 39px;
+    font-weight: 300;
+}
+.revestimientos h4, .fachada h4 {
+    font-size: 40px;
+}
+
+.revestimientos p, .fachada p {
+    font-size: 20px;
+}
+
+.revestimientos {
+    background-position-y: -123vw;
+    height: 50vw;
+    position: static;
+}
+
+.fachada {
+    height: 50vw;
+    position: static;
+}
+}
+
+@media (min-width: 1024px) {
+    .versatilidad {
+        flex-direction: row;
+        padding-top: 0;
+        gap: 1vw;
+    }
+    .cont_logo_dekton {
+        width: 154%;
+        height: 40VW;
+        background-position-x: -4vw;
+    }
+    .simbolos {
+        gap: 10vw;
+    }
+    .aplicaciones_dk_info_2 a {
+        display:block;
+        align-self: end;
+    }
+    .aplicaciones_dk {
+        flex-direction: row;
+    }
+    .aplicaciones_dk_info {
+        width: 50%;
+    }
+    .aplicaciones_dk_info_2 h3 {
+        text-align: end;
+    }
+    .grosor img {
+        order: 1;
+    }
+    .info, .info p {
+        align-items: flex-start;
+        order: 0;
+    }
+        .formatos {
+        flex-direction: column;
+        gap: 0;
+        padding: 5vw;
+        padding-bottom: 0;
+        }
+    .formato img, .grosor img {
+        height: 25vw;
+        width: auto;
+    }
+
+        .revestimientos {
+            background-position-y: -43vw;
+            background-position-x: 0vw;
+            height: 40vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: static;
+            width: 50%;
+            padding: 5vw;
+            gap: 1vw;
+        }
+    .fachada
+ {
+    background-position-y: -16vw;
+    background-position-x: 0vw;
+    height: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: static;
+    padding: 5vw;
+    width: 50%;
+    text-align: end;
+    gap: 1vw;
+}
+
+
+
 }

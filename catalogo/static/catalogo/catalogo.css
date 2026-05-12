@@ -237,6 +237,33 @@
     opacity: 0;
 }
 
+@media (max-width: 768px) {
+    
+.slider_categorias div{
+    font-size: 30px
+}
+
+.catalogo_dots {
+
+    margin-top: 3vw;
+}
+
+.categoria_descripcion {
+    height: 20vw;
+    text-align: center;
+}
+.tipo_de_piedra {
+    column-gap: 11vw;
+}
+
+.producto_media {
+    width: 150%;
+}
+}
+
+
+
+
 @media (max-width: 480px) {
     .slide.is-active{
     display: flex;
