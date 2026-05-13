@@ -120,6 +120,41 @@ header .contenedor_header a.is-active {
     display: none;
 }
 
+footer {
+    background-color: #175EAC;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 4.688vw;
+    width: auto;
+}
+footer p {
+    color: var(--bg);
+    font-size: 20px;
+    font-weight: 300;
+    }
+.texto_footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2.604vw;
+    align-items: center;
+}
+
+.iconos_redes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.iconos_redes svg{
+    height: 20px;
+    width: auto;
+
+}
 
 @media (max-width: 820px) {
     .icono_home{
@@ -174,6 +209,7 @@ header .contenedor_header a.is-active {
     header .contenedor_header a.is-active {
     color: var(--bg);
     background-color: var(--primary);
+    width: 100%;
     }
 }
 
@@ -230,7 +266,31 @@ header .contenedor_header a.is-active {
     header .contenedor_header a.is-active {
     color: var(--bg);
     background-color: var(--primary);
+    width: 100%;
     }
+
+    footer {
+    height: 100%;
+    padding: 2vw;
+    gap: 3vw;
+    }
+    footer p {
+    font-size: 1.7vw;
+}
+    .texto_footer {
+    gap: 1vw;
+}
+
+.iconos_redes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.iconos_redes svg {
+    height: 2vw;
+    width: auto;
+}
 }
 
 @media (max-width:480px ) {
@@ -286,6 +346,7 @@ header .contenedor_header a.is-active {
     header .contenedor_header a.is-active {
     color: var(--bg);
     background-color: var(--primary);
+    width: 100%;
     }
     }
 
@@ -306,44 +367,25 @@ header .contenedor_header a.is-active {
 
 
 
-footer {
-    background-color: #175EAC;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    height: 4.688vw;
-    width: auto;
-}
 
 @media (max-width:480px ) {footer {
     justify-content: center;
     gap: 5.208vw;
     height: 25vw;
+    gap: 3vw;
 }}
 
-footer p {
-    color: var(--bg);
-    font-size: 20px;
-    font-weight: 300;
-    }
+
     
 @media (max-width:480px ) {footer p {
     font-size: 9px;
 }}
-.texto_footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 2.604vw;
-    align-items: center;
-}
 
 @media (max-width:480px ) {.texto_footer {
     gap: 2.5vw;
     align-items: center;
     text-align: left;
-    width: 25%;
+    width: 40%;;
 }}
 
 @media (max-width:480px ) {.texto_footer p{
@@ -357,13 +399,7 @@ footer p {
     display: none;
 }}
 
-.iconos_redes {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-}
+
 
 @media (max-width:480px ) {.iconos_redes {
     display: grid;
@@ -377,11 +413,7 @@ footer p {
     justify-content: center;
 }
 
-.iconos_redes svg{
-    height: 20px;
-    width: auto;
 
-}
 
 @media (max-width:480px ) {.iconos_redes svg {
     height: 20px;
@@ -418,10 +450,11 @@ footer p {
     justify-content: space-between;
     align-items: center;
     gap: 28px;
+    
 }
 
 @media (max-width:480px ) {.datos_contacto {
-    gap: 5px;
+   gap: 4vw;;
 }}
 
 .telefono, .correo {

@@ -766,7 +766,7 @@
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(3, 20.833vw);
-        gap: 20.833vw 1.25vw;
+        gap: 5vw 1.25vw;
         justify-items: center;
         align-items: start;
         margin-bottom: 10.417vw;
@@ -917,13 +917,12 @@
     .proceso_compra {
     flex-direction: column;
 }
-    .slider_caption {
-    width: 100%;
-}
 
     .slider_caption {
-    top: 100%;
+    top: 65%;
     left: 50%;
+    width: 100%;
+    
 }
 
 .slider_caption h2 {
